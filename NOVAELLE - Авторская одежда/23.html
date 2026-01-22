@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>NOVAELLE - Авторская одежда</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Montserrat:wght@200;300;400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#A68E76", // Warm beige/brown from the logo/accents
+              secondary: "#333333", // Dark charcoal for text
+              "background-light": "#FAF9F6", // Off-white/Cream
+              "background-dark": "#1A1918", // Dark brownish-black
+              "surface-light": "#FFFFFF",
+              "surface-dark": "#262422",
+              "accent-light": "#EBE5DE", // Light beige for backgrounds
+              "accent-dark": "#3D3834",
+            },
+            fontFamily: {
+              display: ["'Playfair Display'", "serif"],
+              sans: ["'Montserrat'", "sans-serif"],
+            },
+            spacing: {
+              128: "32rem",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .text-vertical-center {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+      }
+      .hero-overlay {
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.3) 0%,
+          rgba(0, 0, 0, 0) 100%
+        );
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-secondary dark:text-gray-200 font-sans antialiased selection:bg-primary selection:text-white transition-colors duration-300"
+  >
+    <header
+      class="w-full bg-surface-light dark:bg-surface-dark border-b border-gray-100 dark:border-gray-800 sticky top-0 z-50"
+    >
+      <div
+        class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center relative"
+      >
+        <nav
+          class="hidden md:flex space-x-6 text-xs font-medium tracking-widest uppercase text-gray-500 dark:text-gray-400"
+        >
+          <a class="hover:text-primary transition-colors" href="#">Каталог</a>
+          <a class="hover:text-primary transition-colors" href="#"
+            >New collection</a
+          >
+          <a class="hover:text-primary transition-colors" href="#"
+            >Доставка и оплата</a
+          >
+        </nav>
+        <div
+          class="text-center md:absolute md:left-1/2 md:transform md:-translate-x-1/2 mb-4 md:mb-0"
+        >
+          <a
+            class="font-display text-3xl tracking-widest text-primary font-medium"
+            href="#"
+            >NOVAELLE</a
+          >
+        </div>
+        <nav
+          class="flex items-center space-x-6 text-xs font-medium tracking-widest uppercase text-gray-500 dark:text-gray-400"
+        >
+          <a
+            class="hidden md:block hover:text-primary transition-colors"
+            href="#"
+            >Поиск</a
+          >
+          <a
+            class="hidden md:block hover:text-primary transition-colors"
+            href="#"
+            >Информация</a
+          >
+          <a
+            class="hidden md:block hover:text-primary transition-colors"
+            href="#"
+            >Контакты</a
+          >
+          <div class="flex items-center space-x-3 text-lg">
+            <button class="hover:text-primary transition-colors">
+              <span class="material-icons-outlined text-base">person</span>
+            </button>
+            <button class="hover:text-primary transition-colors">
+              <span class="material-icons-outlined text-base"
+                >favorite_border</span
+              >
+            </button>
+            <button class="hover:text-primary transition-colors">
+              <span class="material-icons-outlined text-base"
+                >shopping_bag</span
+              >
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <section
+      class="relative w-full h-[600px] md:h-[800px] overflow-hidden flex flex-col md:flex-row"
+    >
+      <div
+        class="w-full md:w-1/3 h-1/3 md:h-full relative border-r border-white/20"
+      >
+        <img
+          alt="Fashion model back view"
+          class="w-full h-full object-cover"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeuiiuiXNOFr1yv4_I8W7Rsv06U70s7XZmdTNnkzc3SuEaTgmBldsLGyC4A4L0fKqanpVk0GSrV3ibDK1BADlsUKrqLVitEE2o7R6dcygTwmQNm-IIC56IoIamvKhrsR4UjJfP3uCGba6D3dH1Ezo-B9UBj7kbFlimSd1xHKSZcQjiXCQ81dfyGHeU1maEtoPMNhsVq5iqg04OJ6hBWV-mBuJBdPGFp9zEDoFkRBNoj6FSuGNjRLJbtSNOnuFNheS761oqnxAdtSHE"
+        />
+        <div class="absolute inset-0 bg-black/10 dark:bg-black/40"></div>
+      </div>
+      <div
+        class="w-full md:w-1/3 h-1/3 md:h-full relative border-r border-white/20"
+      >
+        <img
+          alt="Fashion model front view beige suit"
+          class="w-full h-full object-cover"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAzbGmg6WHDsA4h_V6h6lomS1JsALPnsJE6qz69pwG4Wk3SYoq8VTsjm0YrGYsMWuxbNXwOnpsHQzJ8ceENSEk57MxUXAlLTOoB1Os5GhzM-ALNq2k2xwbQZqnYI9CiNsZhq0CJ8Ilo-R0CMoBFV61MXupRJjI_Bw9bPW1w_YdxC_g3Nzv-oKbPlZLR7_KREKvZPLomgHxtNjKb95rIRyF9DOgan84MDvRUPbZSETBMZYKaRAvO6eSAbdu-uqnnkObJFMc2-RAn_C0"
+        />
+        <div class="absolute inset-0 bg-black/10 dark:bg-black/40"></div>
+      </div>
+      <div class="w-full md:w-1/3 h-1/3 md:h-full relative">
+        <img
+          alt="Fashion model brown shirt"
+          class="w-full h-full object-cover"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmfkFJpkbedyLY_jvdiqA9nAlIodncxoJMk83BpBNAdHpK33oI1oOhhc5EbP1xHZtLCmTWJGHzrjZFWfra-5dGkb8ivGdcV7KAX9B0owsCnQtdRDUew4MZPH1isgrT15NKXjs0dcYF-YVieY-SoNfWk15s7D3S6N0PHjne3yn0AbkedS8O0x2fUontSBD24yNTyhHmjAfXqsYAaF8NvUR-2Ox1a4FflTi-oh7LDDoifmYfO5pSgGtD5gGojMnbtwbpAhdCf020TNT7"
+        />
+        <div class="absolute inset-0 bg-black/10 dark:bg-black/40"></div>
+      </div>
+      <div
+        class="absolute inset-0 flex flex-col justify-center items-center pointer-events-none z-10 px-4"
+      >
+        <div
+          class="w-full max-w-7xl mx-auto h-full flex flex-col justify-center md:justify-end pb-20 md:pb-32 relative"
+        >
+          <div
+            class="absolute top-1/2 left-4 md:left-10 transform -translate-y-1/2 md:translate-y-0 md:top-auto md:bottom-20 text-white mix-blend-overlay opacity-90 pointer-events-auto"
+          >
+            <h1
+              class="font-display text-5xl md:text-8xl lg:text-9xl leading-tight uppercase tracking-wide drop-shadow-lg"
+            >
+              <span class="block text-white/90">Авторская</span>
+              <span class="block ml-0 md:ml-16 text-white/90">Одежда</span>
+            </h1>
+            <p
+              class="font-sans text-xs md:text-sm tracking-[0.2em] mt-4 ml-1 text-white uppercase max-w-xs leading-relaxed"
+            >
+              Которая пробуждает<br />
+              любовь к себе
+            </p>
+          </div>
+          <div
+            class="absolute bottom-10 right-4 md:right-20 md:bottom-32 bg-transparent pointer-events-auto text-center md:text-right"
+          >
+            <a
+              class="inline-block bg-white text-gray-900 hover:bg-gray-100 transition-colors px-10 py-4 font-medium uppercase tracking-widest text-xs shadow-xl mb-4"
+              href="#"
+            >
+              Перейти в каталог
+            </a>
+            <p
+              class="text-white text-[10px] md:text-xs uppercase tracking-wider font-light drop-shadow-md"
+            >
+              Скидка 10% на первый заказ <br />по промокоду: WELCOME
+            </p>
+          </div>
+        </div>
+        <div
+          class="absolute inset-0 flex items-center justify-center pointer-events-none hidden md:flex"
+        >
+          <div class="w-full h-px bg-white/30 absolute"></div>
+          <div class="bg-white rounded-full p-1 z-20">
+            <span class="block w-2 h-2 bg-transparent"></span>
+            <svg
+              class="text-primary transform rotate-45"
+              fill="currentColor"
+              height="12"
+              viewBox="0 0 24 24"
+              width="12"
+            >
+              <rect height="24" width="24"></rect>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-16 md:py-24 bg-background-light dark:bg-background-dark">
+      <div class="container mx-auto px-6">
+        <div
+          class="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-gray-200 dark:border-gray-700 pb-6"
+        >
+          <h2
+            class="font-display text-4xl md:text-5xl text-primary mb-6 md:mb-0"
+          >
+            КАТАЛОГ
+          </h2>
+          <div class="flex flex-wrap gap-3">
+            <button
+              class="bg-gray-800 text-white dark:bg-white dark:text-gray-900 px-6 py-2 text-[10px] uppercase tracking-widest font-medium"
+            >
+              Все
+            </button>
+            <button
+              class="border border-gray-300 dark:border-gray-600 px-6 py-2 text-[10px] uppercase tracking-widest font-medium text-gray-600 dark:text-gray-300 hover:border-gray-800 dark:hover:border-white transition-colors"
+            >
+              Костюмы
+            </button>
+            <button
+              class="border border-gray-300 dark:border-gray-600 px-6 py-2 text-[10px] uppercase tracking-widest font-medium text-gray-600 dark:text-gray-300 hover:border-gray-800 dark:hover:border-white transition-colors"
+            >
+              Платья
+            </button>
+            <button
+              class="border border-gray-300 dark:border-gray-600 px-6 py-2 text-[10px] uppercase tracking-widest font-medium text-gray-600 dark:text-gray-300 hover:border-gray-800 dark:hover:border-white transition-colors"
+            >
+              Рубашки и блузки
+            </button>
+            <button
+              class="border border-gray-300 dark:border-gray-600 px-6 py-2 text-[10px] uppercase tracking-widest font-medium text-gray-600 dark:text-gray-300 hover:border-gray-800 dark:hover:border-white transition-colors"
+            >
+              Брюки
+            </button>
+            <button
+              class="border border-gray-300 dark:border-gray-600 px-6 py-2 text-[10px] uppercase tracking-widest font-medium text-gray-600 dark:text-gray-300 hover:border-gray-800 dark:hover:border-white transition-colors"
+            >
+              Боди
+            </button>
+            <button
+              class="border border-gray-300 dark:border-gray-600 px-6 py-2 text-[10px] uppercase tracking-widest font-medium text-gray-600 dark:text-gray-300 hover:border-gray-800 dark:hover:border-white transition-colors"
+            >
+              Аксессуары
+            </button>
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-8"
+        >
+          <div class="group cursor-pointer">
+            <div class="relative overflow-hidden mb-4 bg-gray-100 aspect-[3/4]">
+              <img
+                alt="Product"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAqLV2kwdMgXnGrbbg_IqdJA9TuAWzmi3unUyvXrIQtxjnh9A_i8crUlFPVLf0hL7q0zPu9FRDl34S8z-fJyowhJFvoTAY9_t2ezFCxLGZpKw6QzX1MXgBOzBNXTweOxOp07i8G2CuGdQRY9rJ741pfbVdbq3_-by0GJAu7apVSVYUdgxwYpSTpMADciP048OIYwSIC1IoLfEQ4RjTMEukeG66Cc_RVHCJSPU4TUPl2Fs2LmKpoLEi9ZAnG9zrl8OhAL_mL_CWFpcE"
+              />
+            </div>
+            <div class="flex justify-between items-start">
+              <div>
+                <h3
+                  class="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-1"
+                >
+                  Блузка Novaelle
+                </h3>
+                <p class="font-display text-lg text-primary">5.500 ₽</p>
+              </div>
+              <button
+                class="p-2 bg-gray-800 dark:bg-gray-700 text-white rounded-none hover:bg-primary transition-colors"
+              >
+                <span class="material-icons-outlined text-sm"
+                  >shopping_bag</span
+                >
+              </button>
+            </div>
+          </div>
+          <div class="group cursor-pointer relative">
+            <button
+              class="absolute top-2 right-2 z-10 bg-white/80 p-1 rounded-sm hover:bg-white transition"
+            >
+              <span class="material-icons-outlined text-gray-800 text-sm"
+                >favorite</span
+              >
+            </button>
+            <div class="relative overflow-hidden mb-4 bg-gray-100 aspect-[3/4]">
+              <img
+                alt="Product"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXtd7xOoc6Auo78aGBFnzjpovYNmDUZHqMZ0zokCX5VUh0VItKxRVX9DxUxJz6RRv-MPP0Xp57jQS-f2gMFFcqUUsHmT9Sc6nItwv-08J6Oe_SwUdvS2WEM1vHIxgEdWZlC15UQJyYjPW2klo9CNF-0j5QcTPTmBP5gTKJP6HV7MgLoKW2SgOVhde_aO4ph45Xokv5OJFmHnzffEfkijPFlR2YPOU7dHgezoMuJVQ6V8Necx5EZlWJyDCUbFMLZ2Ivj4RR4F_UdbgN"
+              />
+              <div
+                class="absolute bottom-0 left-0 w-full bg-secondary text-white text-center py-3 text-xs uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                Добавить в корзину
+              </div>
+            </div>
+            <div class="flex justify-between items-start">
+              <div>
+                <h3
+                  class="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-1"
+                >
+                  Платье Novaelle
+                </h3>
+                <p class="font-display text-lg text-primary">9.000 ₽</p>
+              </div>
+            </div>
+          </div>
+          <div class="group cursor-pointer">
+            <div class="relative overflow-hidden mb-4 bg-gray-100 aspect-[3/4]">
+              <img
+                alt="Product"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL-RxJfTxcQcMToW821-p8D4JKH2WnBluNot4xhNvW5S-1pOHpeYZEMEtZthp0mbrlyTUe5ncgX-4CNfpHFlHUdQgdN2UONq4Ou2BKlc6bgms89eRxwxyBg5nL-resJH6grjA2wPvBKVWFx47vWb6-HMCcN3w-BsPDaNbUn8QKyBrMnYG8OM7op6GnzA5LOaw4F1e5GbhKk7GeuShzDDvA2yvAWqDx4P9hlFt4w22qiABkxMESNcQy959HXlxAUAqrcsHjyHOYRC45"
+              />
+            </div>
+            <div class="flex justify-between items-start">
+              <div>
+                <h3
+                  class="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-1"
+                >
+                  Костюм Novaelle
+                </h3>
+                <p class="font-display text-lg text-primary">15.500 ₽</p>
+              </div>
+              <button
+                class="p-2 bg-gray-800 dark:bg-gray-700 text-white rounded-none hover:bg-primary transition-colors"
+              >
+                <span class="material-icons-outlined text-sm"
+                  >shopping_bag</span
+                >
+              </button>
+            </div>
+          </div>
+          <div class="group cursor-pointer">
+            <div class="relative overflow-hidden mb-4 bg-gray-100 aspect-[3/4]">
+              <img
+                alt="Product"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJkHaEuXrDRrHPuvMbOXphY-ldJ1F2KdqA4450Hv8DqMS0dQBtmLhT9ODDua6gr08x7vfV8c_O6cO25p_TfYUUQ9vv0BeVTUBtCO2bYIkGg9qnduqUxBAYFjm-OgeJ_ARlInBOvI8aURLT54UikLqXez9Oxh7RocJqhXxOhsoqILuILmanv9uKsXZ9FBGXzuadBHwljHjSiiZ9whQj10-jNdH2wXeEDUnjaPix4Z6s3tEvHaq6HgDG8LSrB_ukq805tWNKRgxFJ6__"
+              />
+            </div>
+            <div class="flex justify-between items-start">
+              <div>
+                <h3
+                  class="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-1"
+                >
+                  Пиджак Novaelle
+                </h3>
+                <p class="font-display text-lg text-primary">7.900 ₽</p>
+              </div>
+              <button
+                class="p-2 bg-gray-800 dark:bg-gray-700 text-white rounded-none hover:bg-primary transition-colors"
+              >
+                <span class="material-icons-outlined text-sm"
+                  >shopping_bag</span
+                >
+              </button>
+            </div>
+          </div>
+          <div class="group cursor-pointer">
+            <div class="relative overflow-hidden mb-4 bg-gray-100 aspect-[3/4]">
+              <img
+                alt="Product"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6u9661gwunp3FExXf6W0GF58xexmsZ2nu2I9hFIK99jrWNZkjza0-CwvyZ74Jhjj2GiPGLRqjT_ZCm0s0PCuKvfKHc9CN1lwcXf2DlcEj9nTZDyoifme0m_560ao0LYFE-4XI7FrcDoLDkxyiDa0z_APcQ52Ut-clAwvyWYAERsXJwa0s65rfkCVAN4DMpovrHUZYo7gcJu9g80R_addlwP8CMSagNIIgydzf0t036p29Irpq7NLCkR-DRJAyoc3N-gBauVsElLI0"
+              />
+            </div>
+            <div class="flex justify-between items-start">
+              <div>
+                <h3
+                  class="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-1"
+                >
+                  Шляпа Novaelle
+                </h3>
+                <p class="font-display text-lg text-primary">2.700 ₽</p>
+              </div>
+              <button
+                class="p-2 bg-gray-800 dark:bg-gray-700 text-white rounded-none hover:bg-primary transition-colors"
+              >
+                <span class="material-icons-outlined text-sm"
+                  >shopping_bag</span
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-12 bg-white dark:bg-surface-dark overflow-hidden">
+      <div class="container mx-auto">
+        <div class="flex flex-col lg:flex-row h-auto lg:h-[700px]">
+          <div
+            class="w-full lg:w-5/12 relative h-[500px] lg:h-full bg-accent-light dark:bg-accent-dark"
+          >
+            <img
+              alt="Model with flowers"
+              class="w-full h-full object-cover object-top opacity-90"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0wd2-p0Mp0SPaEH7zYXx8u_jpYj-JMUu2jqUfBMNFKlrHBj_DIH47R_mnjIEd4LDK_RP-yIIebwxNZOjNd5FmkHbHGF2z5lqjB_AWsXJWIISsFN8vpYf4m3k86nS8x8nM6RnxUSQR0TjLKkr_uJffM55fQyTr8nok3xTEJReoOkx-NWfM-s1Gt3lnhoyavdaTst3LzpeRqy04wrCJmPH9wHxroyXXJx4FyroNHtXiwaAja9nFSJ5Lupt-0cseMMxgn5CrthN37YwA"
+            />
+            <div
+              class="absolute top-1/2 left-0 w-full h-px bg-white/50 hidden lg:block"
+            ></div>
+          </div>
+          <div
+            class="w-full lg:w-7/12 p-8 lg:p-20 flex flex-col justify-center relative bg-white dark:bg-surface-dark"
+          >
+            <div
+              class="mb-6 flex justify-between items-center text-[10px] uppercase tracking-widest text-gray-400"
+            >
+              <span>Искусство современной элегантности</span>
+            </div>
+            <h2
+              class="font-display text-6xl md:text-8xl text-primary opacity-80 mb-8 tracking-widest relative"
+            >
+              NOVAELLE
+              <span
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-20 text-9xl -z-10 text-accent-light dark:text-accent-dark filter blur-sm select-none"
+                >NOVAELLE</span
+              >
+            </h2>
+            <div class="max-w-lg mx-auto lg:mx-0">
+              <p
+                class="text-gray-600 dark:text-gray-300 font-sans text-sm md:text-base leading-relaxed mb-6"
+              >
+                <strong class="text-gray-900 dark:text-white"
+                  >Это больше, чем одежда.</strong
+                >
+                Это выражение современной женственности во всей ее
+                многогранности. Мы создаем не просто предметы гардероба, а
+                инструменты самовыражения для женщин, которые меняют мир,
+                оставаясь верными себе.
+              </p>
+            </div>
+            <div
+              class="hidden lg:block mt-12 h-64 w-full overflow-hidden relative"
+            >
+              <img
+                alt="Fabric detail"
+                class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3Z6Ph4PUtMhx3IFfX3Z97W5ogW4Bu6ma8WjTx3-4u70_P5Dg0zyysD5aThor7IjhTZcEilfMEtHaIvgSPlnKTMe91vdvrpMrZjTUqmuL1Dz0f7C_KbMkZGpOp6KaD6g_BbAS2OhdmJaEfTXHK5DVdP5Cu6Mp7owPGbD27FtPPvkrqECThd7tkOdythX87jUOAnIyAmYZFgT5btDjF0PbeFwGSLiaA951im_HfWntkVj2XOxOEH6HW_WqKE29ijtfn2ejlQqOxtXJ9"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="h-[300px] md:h-[400px] w-full grid grid-cols-2">
+      <div
+        class="h-full bg-accent-light dark:bg-accent-dark overflow-hidden relative"
+      >
+        <img
+          alt="Lifestyle shot"
+          class="w-full h-full object-cover"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBusKSsTAY9Zh3c_U23jhoDWNaLShxj2lynAjVMRLDRg_sUyijje0E_7GNnS73eDC0DTOJeL8nh38w-_30K_5iBUn_XBDcviIw9QJ6Pp63DgBxnKuLjL0vuprjAQnONauydclXV7FLs-H2KPZKp6122y1aoiKfsBTcyqokL7Qqq9O3sQDBcg8MnlQZJ5YVogs3Ds5wXeV2A46Ur9Xh_9oQq5LmUczZU90C-H7Ay4eL4iwrNXNJwJS63tlL3NzS-vJspKl91jbO-ViWB"
+        />
+      </div>
+      <div
+        class="h-full bg-accent-light dark:bg-accent-dark overflow-hidden relative"
+      >
+        <img
+          alt="Lifestyle shot detail"
+          class="w-full h-full object-cover"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP9C_LPP29glXlcMw-6E9SerhC7G8CscDulJ-ic2pUz70OKT5aaidS6TsxagvnUB1uP30jHOs3ywiYnrYAqAOexHs3XpK0KfCcb62gyyKjVGcnicjqDvHOTDPJDvQ-mSDxcNB7LOJOJt_4JR4c3wx_a1zKTg8UP_UVFE76ingwBxDrj5cKPH_bxl6na_2Tiy4HuAlE5E307L9thR96-s4fX43CkNxPMJY8HekUv50KHK_NjZdLHnHy6hGu5pkRVlnUfAuaHvuNyv68"
+        />
+      </div>
+    </section>
+    <footer
+      class="bg-surface-light dark:bg-background-dark py-20 border-t border-gray-100 dark:border-gray-800"
+    >
+      <div class="container mx-auto px-6 text-center max-w-2xl">
+        <h3 class="font-display text-2xl md:text-3xl text-primary mb-4">
+          Подпишитесь на рассылку новостей, чтобы получать<br />
+          обновления наших последних коллекций
+        </h3>
+        <p
+          class="text-xs text-gray-500 dark:text-gray-400 mb-8 leading-relaxed"
+        >
+          Получите
+          <strong class="text-gray-800 dark:text-gray-200">скидку 10%</strong>
+          на свой первый заказ, подписавшись<br />на нашу рассылку новостей
+        </p>
+        <form
+          class="flex flex-col md:flex-row gap-0 shadow-sm max-w-lg mx-auto"
+        >
+          <div class="relative flex-grow">
+            <span
+              class="absolute inset-y-0 left-0 flex items-center pl-4 text-gray-400"
+            >
+              <span class="material-icons-outlined text-sm">mail_outline</span>
+            </span>
+            <input
+              class="w-full py-3 pl-10 pr-4 bg-gray-100 dark:bg-surface-dark border-none focus:ring-1 focus:ring-primary text-sm placeholder-gray-400 dark:text-white dark:placeholder-gray-500"
+              placeholder="Введите ваш Email"
+              type="email"
+            />
+          </div>
+          <button
+            class="bg-secondary hover:bg-black text-white px-8 py-3 text-xs uppercase tracking-widest font-medium transition-colors"
+            type="button"
+          >
+            Подписаться
+          </button>
+        </form>
+        <p class="text-[10px] text-gray-400 mt-6">
+          Вы сможете отказаться от рассылки в любое время
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

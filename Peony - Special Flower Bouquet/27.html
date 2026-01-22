@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Peony - Special Flower Bouquet</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#E88FA2", // Soft Pink
+              "primary-hover": "#D67A8D",
+              "background-light": "#F9F4EA", // Cream/Off-white
+              "background-dark": "#1C1B1B", // Dark Charcoal
+              "surface-light": "#FFFFFF",
+              "surface-dark": "#2A2725",
+              "accent-gold": "#CDBA7C",
+            },
+            fontFamily: {
+              display: ["'Playfair Display'", "serif"],
+              body: ["'DM Sans'", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              xl: "1rem",
+              "2xl": "1.5rem",
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Playfair+Display:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <style>
+      details > summary {
+        list-style: none;
+      }
+      details > summary::-webkit-details-marker {
+        display: none;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 font-body transition-colors duration-300 antialiased selection:bg-primary selection:text-white"
+  >
+    <nav
+      class="sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 transition-colors duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <div class="flex-shrink-0 flex items-center">
+            <a
+              class="font-display text-3xl font-medium tracking-tight hover:opacity-80 transition-opacity"
+              href="#"
+            >
+              Peony
+              <span class="text-primary ml-1 text-2xl">✿</span>
+            </a>
+          </div>
+          <div
+            class="hidden md:flex space-x-8 text-sm font-medium tracking-wide uppercase text-gray-600 dark:text-gray-400"
+          >
+            <a
+              class="hover:text-black dark:hover:text-white transition-colors"
+              href="#"
+              >Cases of life</a
+            >
+            <a
+              class="hover:text-black dark:hover:text-white transition-colors"
+              href="#"
+              >Gift cards</a
+            >
+            <a
+              class="hover:text-black dark:hover:text-white transition-colors"
+              href="#"
+              >Catalog</a
+            >
+            <a
+              class="hover:text-black dark:hover:text-white transition-colors"
+              href="#"
+              >Blog</a
+            >
+            <a
+              class="hover:text-black dark:hover:text-white transition-colors"
+              href="#"
+              >Contacts</a
+            >
+          </div>
+          <div
+            class="flex items-center space-x-5 text-gray-600 dark:text-gray-400"
+          >
+            <button
+              class="hover:text-black dark:hover:text-white transition-colors"
+            >
+              <span class="material-icons-outlined text-xl">search</span>
+            </button>
+            <button
+              class="hover:text-black dark:hover:text-white transition-colors"
+            >
+              <span class="material-icons-outlined text-xl"
+                >favorite_border</span
+              >
+            </button>
+            <button
+              class="hover:text-black dark:hover:text-white transition-colors relative"
+            >
+              <span class="material-icons-outlined text-xl">shopping_bag</span>
+              <span
+                class="absolute -top-1 -right-1 h-2 w-2 bg-primary rounded-full"
+              ></span>
+            </button>
+            <button
+              class="hover:text-black dark:hover:text-white transition-colors"
+            >
+              <span class="material-icons-outlined text-xl"
+                >person_outline</span
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <nav
+        aria-label="Breadcrumb"
+        class="flex text-xs text-gray-500 dark:text-gray-400"
+      >
+        <ol class="flex items-center space-x-2">
+          <li>
+            <a class="hover:text-gray-900 dark:hover:text-white" href="#"
+              >Main</a
+            >
+          </li>
+          <li>/</li>
+          <li>
+            <a class="hover:text-gray-900 dark:hover:text-white" href="#"
+              >Catalog</a
+            >
+          </li>
+          <li>/</li>
+          <li class="text-gray-900 dark:text-white font-medium">Special</li>
+        </ol>
+      </nav>
+    </div>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div class="lg:col-span-7 flex flex-col gap-6">
+          <div
+            class="relative group aspect-[4/5] w-full overflow-hidden rounded-3xl bg-gray-100 dark:bg-gray-800"
+          >
+            <img
+              alt="Single pink flower stalk in minimalist vase"
+              class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAs830p1S_SNJh0MbH4MWDlaL2PZdHcCsnqjAz7l1JiDZcwvc8N2F3F0AhhviShAZJjhVvl3MnH_CttJ9DRNINN32HfBuS3G-Ey6jJBMCG0pKUhizAG11hrjRzwBgjBeM6aACvZvN5yyYLBRfhUA0DTUla7Tr2DiGW3MljyBDoR-kS4j9yjU2ZqKppxiKXCf4Or3DjDEiG4q3v1DMyGrhKnE0gDpkhrc2GwBurnc-1QBIfFkMr29shUBUZgnDzpmgcpUptuimjgaCo"
+            />
+            <button
+              class="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/30 dark:bg-black/30 backdrop-blur hover:bg-white/50 dark:hover:bg-black/50 text-white transition-all"
+            >
+              <span class="material-icons-outlined">arrow_back</span>
+            </button>
+            <button
+              class="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/30 dark:bg-black/30 backdrop-blur hover:bg-white/50 dark:hover:bg-black/50 text-white transition-all"
+            >
+              <span class="material-icons-outlined">arrow_forward</span>
+            </button>
+          </div>
+          <div class="flex gap-4 overflow-x-auto no-scrollbar pb-2">
+            <div
+              class="h-24 w-24 flex-shrink-0 rounded-xl overflow-hidden cursor-pointer border-2 border-primary"
+            >
+              <img
+                alt="Thumbnail 1"
+                class="h-full w-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoeHSwiIE3aCt4rLHBx_XNjZ--0uhT-XT4-DwNEBbq2rGBIKO4kBvylXhjNd3FBDlwS5uVFsrkA_CG_2RHPiuhzyam7xA91w0Q0JL-e991WGICmlFobWXW12b1hgcRlrIjqTTB289cI6f3oExIJ6FU0_mdZjmsCnqVxQFEF1HmUdBrqA5g95LwQQYQqWnDlPE1mGzXdH1MySMdOjcJFzvrYrXgTqVTkGzA5cusJudQORlZRT6vIOEBSFDFVqO5jLzcdkzE8qL5KJY"
+              />
+            </div>
+            <div
+              class="h-24 w-24 flex-shrink-0 rounded-xl overflow-hidden cursor-pointer border border-transparent hover:border-gray-300 dark:hover:border-gray-600"
+            >
+              <img
+                alt="Thumbnail 2"
+                class="h-full w-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAq7mAkKuyhuY87UbPN-NFxiyqwQ-ZTqyEG2k_hEREu_Ae-Mxr9zJvn49r3LCiCBn1MYZR-DGb6mIuMSw54GwBrejvU97zpeolQZbRS4UThRTpbPqQVHC53xETthKXFYEd_-ShUagtAY3a0-kBLBbCsAuR-Iy1M0lxDf9FJqWQ88WcP66ztsN6WMo4CEpWVbeUpsMVE00ukWV5px5PPlWcimQ0RkerzKnjvg3GDhNRldfAqMwmXRgldmdMBWp4lRauAKUEHKafuCLk"
+              />
+            </div>
+            <div
+              class="h-24 w-24 flex-shrink-0 rounded-xl overflow-hidden cursor-pointer border border-transparent hover:border-gray-300 dark:hover:border-gray-600"
+            >
+              <img
+                alt="Thumbnail 3"
+                class="h-full w-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyPIWjRgGI_DGa28C8_tzGyrWop5TtQPnhBBv1uUH9SZG7UXoQ7UVAb4pIAkLdVhzPuFCjJGW6GFAmTJPt6PwqUingWfskJWqODL1Q7deC0hnsJjcZPPdsNx0RnqywnUJ2ffmliL96tRGk-etT7Z3M8PCc1KrZuB5ZBrXCevHTHI2-sxgOYhqvQCHGzF6ERz7SvkByN5VGhHugBRIjGLkRJ5E4CseXIylkVkNNQG6H3nOV_SoLoYt4-srSM4afY11Y708tLGDTXXg"
+              />
+            </div>
+          </div>
+          <div class="mt-8 border-t border-gray-200 dark:border-gray-700">
+            <details
+              class="group border-b border-gray-200 dark:border-gray-700 py-4 cursor-pointer"
+            >
+              <summary
+                class="flex justify-between items-center font-medium text-xs uppercase tracking-wider hover:text-primary transition-colors"
+              >
+                Name of flowers
+                <span
+                  class="material-icons-outlined text-sm transform transition-transform group-open:rotate-180"
+                  >arrow_forward</span
+                >
+              </summary>
+              <div
+                class="mt-3 text-sm text-gray-600 dark:text-gray-400 leading-relaxed"
+              >
+                Gerbera Daisy, Ranunculus, Sweet Pea, and decorative foliage.
+              </div>
+            </details>
+            <details
+              class="group border-b border-gray-200 dark:border-gray-700 py-4 cursor-pointer"
+            >
+              <summary
+                class="flex justify-between items-center font-medium text-xs uppercase tracking-wider hover:text-primary transition-colors"
+              >
+                Bouquet Storage Rules
+                <span
+                  class="material-icons-outlined text-sm transform transition-transform group-open:rotate-180"
+                  >arrow_forward</span
+                >
+              </summary>
+              <div
+                class="mt-3 text-sm text-gray-600 dark:text-gray-400 leading-relaxed"
+              >
+                Keep in cool water. Trim stems daily. Avoid direct sunlight and
+                drafts.
+              </div>
+            </details>
+            <details
+              class="group border-b border-gray-200 dark:border-gray-700 py-4 cursor-pointer"
+            >
+              <summary
+                class="flex justify-between items-center font-medium text-xs uppercase tracking-wider hover:text-primary transition-colors"
+              >
+                Bouquet Size
+                <span
+                  class="material-icons-outlined text-sm transform transition-transform group-open:rotate-180"
+                  >arrow_forward</span
+                >
+              </summary>
+              <div
+                class="mt-3 text-sm text-gray-600 dark:text-gray-400 leading-relaxed"
+              >
+                Height: 45cm, Diameter: 25cm.
+              </div>
+            </details>
+            <details
+              class="group border-b border-gray-200 dark:border-gray-700 py-4 cursor-pointer"
+            >
+              <summary
+                class="flex justify-between items-center font-medium text-xs uppercase tracking-wider hover:text-primary transition-colors"
+              >
+                Delivery
+                <span
+                  class="material-icons-outlined text-sm transform transition-transform group-open:rotate-180"
+                  >arrow_forward</span
+                >
+              </summary>
+              <div
+                class="mt-3 text-sm text-gray-600 dark:text-gray-400 leading-relaxed"
+              >
+                Available for same-day delivery within the city if ordered
+                before 2 PM.
+              </div>
+            </details>
+          </div>
+        </div>
+        <div class="lg:col-span-5 flex flex-col h-full">
+          <div class="sticky top-24">
+            <div class="flex justify-between items-start mb-2">
+              <h1 class="font-display text-4xl text-gray-900 dark:text-white">
+                Special
+              </h1>
+              <button
+                class="text-gray-400 hover:text-primary transition-colors"
+              >
+                <span class="material-icons-outlined">favorite_border</span>
+              </button>
+            </div>
+            <div
+              class="text-xl font-medium text-gray-900 dark:text-gray-100 mb-8"
+            >
+              20$
+            </div>
+            <div class="mb-8">
+              <svg
+                class="w-12 h-12 text-accent-gold"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C13.1 2 14 2.9 14 4V9.17C14.83 8.64 15.86 8.5 16.83 8.83C17.8 9.16 18.5 9.95 18.83 10.92C19.16 11.89 19 12.92 18.47 13.75L12 22L5.53 13.75C5 12.92 4.84 11.89 5.17 10.92C5.5 9.95 6.2 9.16 7.17 8.83C8.14 8.5 9.17 8.64 10 9.17V4C10 2.9 10.9 2 12 2Z"
+                ></path>
+              </svg>
+            </div>
+            <div
+              class="mb-2 font-bold text-sm text-gray-900 dark:text-gray-100"
+            >
+              Description
+            </div>
+            <p
+              class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-10"
+            >
+              A bouquet of special is a perfect gift for someone who appreciates
+              the beauty of nature and enjoys the simple things in life.
+            </p>
+            <div class="flex items-center gap-4 mb-16">
+              <div
+                class="flex items-center justify-between border border-gray-200 dark:border-gray-700 rounded-full px-4 py-3 w-32 bg-white/50 dark:bg-white/5"
+              >
+                <button
+                  class="text-gray-500 hover:text-black dark:hover:text-white transition-colors"
+                >
+                  -
+                </button>
+                <span class="text-sm font-medium">1</span>
+                <button
+                  class="text-gray-500 hover:text-black dark:hover:text-white transition-colors"
+                >
+                  +
+                </button>
+              </div>
+              <button
+                class="flex-1 bg-primary hover:bg-primary-hover text-white font-medium py-3 px-8 rounded-full uppercase text-sm tracking-wider shadow-lg shadow-primary/30 transition-all active:scale-[0.98]"
+              >
+                Add to card
+              </button>
+            </div>
+            <div class="flex gap-6 mt-auto pt-10">
+              <div class="w-24 h-32 rounded-lg overflow-hidden flex-shrink-0">
+                <img
+                  alt="Small floral detail"
+                  class="w-full h-full object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0wAPV2o-fwiVM5a3BNwxNv5FMY0hkcIsBMKwp3ZRRyoCiKKaiendg9Ndj-BmcInKHxocmmgEHHTmQnSx__k739aI_KKz_ARJ9f9LHHMrAMi3avWj3HLeIkrdVeZcp0FOmgVKEHLe3NwsIYNHO3XYNIXOhkufsvnVWaYFQgpHKXZF0eFhgQg8JeiWgwqOvdtZfTxO62hnOduECXfAtgwTGGOeDXWiC_FgoJZYjUDvPf46S_VT4SVqgSqMjqcp9lEsFAWDSnex7WtY"
+                />
+              </div>
+              <div class="flex flex-col gap-2 justify-end">
+                <a
+                  class="text-xs uppercase underline underline-offset-4 decoration-gray-300 hover:decoration-primary transition-all"
+                  href="#"
+                  >Instagram</a
+                >
+                <a
+                  class="text-xs uppercase underline underline-offset-4 decoration-gray-300 hover:decoration-primary transition-all"
+                  href="#"
+                  >Facebook</a
+                >
+                <a
+                  class="text-xs uppercase underline underline-offset-4 decoration-gray-300 hover:decoration-primary transition-all"
+                  href="#"
+                  >Twitter</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-32">
+        <h2
+          class="font-display text-3xl uppercase text-gray-900 dark:text-white mb-10"
+        >
+          You may like
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <a class="group block" href="#">
+            <div
+              class="aspect-[4/5] rounded-3xl overflow-hidden bg-gray-100 dark:bg-gray-800 relative mb-4"
+            >
+              <img
+                alt="Softness Bouquet"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOfXrhnvM_IBZ_BL-girSyKxHRYhbeBkhp5xo15EyiooN4RMV5UfFjh4l34ex0-lvNGCWlmDxPjUDNzzmW17ru3jjQiCdJFH3SQaaZG4KqbXsHFj_8PPPJ2Vypo7216l6xr5h3hAQnRl5MFOWNZLW3JKTLFYJT_UB1OLMqmDVvD_7JYK4P_pal8kLH8a0gO1QSGFnNtyMUTtzh1iNh8_KjoR7B985zkpg14s8Xl1DoWVj7riw7sa_8tmiGzPh2zqvl5vSxwZ6spIs"
+              />
+              <div
+                class="absolute top-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity"
+              >
+                <span class="material-icons-outlined">favorite_border</span>
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <h3
+                class="font-medium text-gray-900 dark:text-white group-hover:text-primary transition-colors"
+              >
+                Softness
+              </h3>
+              <span class="text-gray-500 dark:text-gray-400 text-sm mt-1"
+                >20$</span
+              >
+            </div>
+          </a>
+          <a class="group block" href="#">
+            <div
+              class="aspect-[4/5] rounded-3xl overflow-hidden bg-gray-100 dark:bg-gray-800 relative mb-4"
+            >
+              <img
+                alt="Gentle Bouquet"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCG3b1FMGm-5DzsGPp6pUs60DysVwpaY1GG71HBUc6H7zIrjeQcRx1Aqdi3ut_5RlIr0SAjbeUWtXH_gzPNM5b1PxJjlU3lJvzgHhvltMMBAUywAkqczCBYiSf1NfskMT_gqKF_ps4HotYnnunPi1ah2y-SSfi5l-291p8zPYZqkUXk9sGMF5VXVvJhBmuZWbL_qoo5sq6DEaHIa8eqcwsePSvF_YHTgoqq223oUO3WQwVebvmK13kEX-Dmh_n_jM7PgcpVX8bOWaU"
+              />
+              <div
+                class="absolute top-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity"
+              >
+                <span class="material-icons-outlined">favorite_border</span>
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <h3
+                class="font-medium text-gray-900 dark:text-white group-hover:text-primary transition-colors"
+              >
+                Gentle
+              </h3>
+              <span class="text-gray-500 dark:text-gray-400 text-sm mt-1"
+                >50$</span
+              >
+            </div>
+          </a>
+          <a class="group block" href="#">
+            <div
+              class="aspect-[4/5] rounded-3xl overflow-hidden bg-gray-100 dark:bg-gray-800 relative mb-4"
+            >
+              <img
+                alt="Snow White Bouquet"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6cEHOceTiLv6LPcv2j0PMixIPkHg1BF6vTQic0K1syuOZuy8hlUZUHy0AYenS1KMx6K58vTWEYZJ0oOfQq_I8ghpe7tiqRFAkmDiL-z4uXtC2UVbbYv_3sSG5qixh3QeCwGeyMiKwt11o-tsuPBDcjafFx4Kk4-JXkCT5EOkByMaDzibNOPSdVbyUsA6Alxu-jYeeV8bJ9qB_7EPLE3fcKPUTgIPhNwEUG0e3qU4YOQtZHFyaCPALU9miBXgA46QUJ4hW_yC8Cag"
+              />
+              <div
+                class="absolute top-4 right-4 text-gray-800 opacity-0 group-hover:opacity-100 transition-opacity"
+              >
+                <span class="material-icons-outlined">favorite_border</span>
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <h3
+                class="font-medium text-gray-900 dark:text-white group-hover:text-primary transition-colors"
+              >
+                Snow White
+              </h3>
+              <span class="text-gray-500 dark:text-gray-400 text-sm mt-1"
+                >35$</span
+              >
+            </div>
+          </a>
+        </div>
+      </div>
+    </main>
+    <footer
+      class="border-t border-gray-200 dark:border-gray-800 pt-16 pb-8 bg-background-light dark:bg-background-dark"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16"
+        >
+          <div class="lg:col-span-2 pr-8">
+            <h3
+              class="text-xs font-bold uppercase tracking-wider mb-6 text-gray-900 dark:text-white"
+            >
+              Flower subscription 10%
+            </h3>
+            <form
+              class="flex border-b border-gray-300 dark:border-gray-600 pb-2"
+            >
+              <input
+                class="w-full bg-transparent border-none focus:ring-0 p-0 text-sm placeholder-gray-400 text-gray-900 dark:text-white"
+                placeholder="Email"
+                type="email"
+              />
+              <button
+                class="text-gray-400 hover:text-primary transition-colors"
+                type="submit"
+              >
+                <span class="material-icons-outlined">arrow_forward</span>
+              </button>
+            </form>
+          </div>
+          <div>
+            <h3
+              class="text-xs font-bold uppercase tracking-wider mb-6 text-gray-900 dark:text-white"
+            >
+              Buyers
+            </h3>
+            <ul class="space-y-3 text-xs text-gray-500 dark:text-gray-400">
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Payment</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Delivery</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Exchange and return</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#">FAQ</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3
+              class="text-xs font-bold uppercase tracking-wider mb-6 text-gray-900 dark:text-white"
+            >
+              Catalog
+            </h3>
+            <ul class="space-y-3 text-xs text-gray-500 dark:text-gray-400">
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Payment</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Delivery</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Exchange and return</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#">FAQ</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3
+              class="text-xs font-bold uppercase tracking-wider mb-6 text-gray-900 dark:text-white"
+            >
+              About Us
+            </h3>
+            <ul class="space-y-3 text-xs text-gray-500 dark:text-gray-400">
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >About Company</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >History of the company</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Cooperation</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Contacts</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="md:hidden lg:block">
+            <h3
+              class="text-xs font-bold uppercase tracking-wider mb-6 text-gray-900 dark:text-white"
+            >
+              Social Media
+            </h3>
+            <ul class="space-y-3 text-xs text-gray-500 dark:text-gray-400">
+              <li>
+                <a
+                  class="hover:text-primary transition-colors underline"
+                  href="#"
+                  >Instagram</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-primary transition-colors underline"
+                  href="#"
+                  >Facebook</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-primary transition-colors underline"
+                  href="#"
+                  >Twitter</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-200 dark:border-gray-800 pt-8 flex justify-between items-center text-[10px] text-gray-400 uppercase tracking-wide"
+        >
+          <div>©2023 All Rights Reserved</div>
+          <div>Privacy Policy</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

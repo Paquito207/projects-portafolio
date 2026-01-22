@@ -1,0 +1,581 @@
+<!doctype html>
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Stoicism Philosophy Editorial</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&amp;family=Inter:wght@300;400;500&amp;family=Playfair+Display:ital,wght@0,400;0,600;1,400&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#D4AF37", // Metallic Gold
+              "background-light": "#F2F2EB", // Warm ancient paper / marble white
+              "background-dark": "#050914", // Deep Void Navy
+              "surface-dark": "#0B111E",
+              "surface-light": "#FFFFFF",
+            },
+            fontFamily: {
+              display: ["Cinzel", "serif"],
+              serif: ["Playfair Display", "serif"],
+              sans: ["Inter", "sans-serif"],
+            },
+            backgroundImage: {
+              "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .grid-lines {
+        background-image: linear-gradient(
+          to right,
+          rgba(100, 100, 100, 0.1) 1px,
+          transparent 1px
+        );
+        background-size: 25% 100%;
+      }
+      .text-stroke {
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+      }
+      .dark .text-stroke {
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #050914;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1f2937;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-300 font-sans transition-colors duration-500 selection:bg-primary selection:text-white"
+  >
+    <div
+      class="fixed inset-0 pointer-events-none z-0 flex justify-between px-4 md:px-12 max-w-7xl mx-auto w-full left-0 right-0"
+    >
+      <div class="h-full w-px bg-gray-300 dark:bg-white/5 relative">
+        <span
+          class="absolute top-24 -left-3 text-[10px] text-gray-400 dark:text-gray-600 font-mono tracking-widest rotate-90 origin-left"
+          >SECTION 01</span
+        >
+      </div>
+      <div
+        class="h-full w-px bg-gray-300 dark:bg-white/5 hidden md:block"
+      ></div>
+      <div
+        class="h-full w-px bg-gray-300 dark:bg-white/5 hidden md:block"
+      ></div>
+      <div class="h-full w-px bg-gray-300 dark:bg-white/5 relative">
+        <span
+          class="absolute bottom-24 -right-3 text-[10px] text-gray-400 dark:text-gray-600 font-mono tracking-widest rotate-90 origin-right"
+          >PHILOSOPHY</span
+        >
+      </div>
+    </div>
+    <nav
+      class="fixed top-0 w-full z-50 py-6 px-6 md:px-12 mix-blend-difference text-white"
+    >
+      <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <div class="flex items-center gap-2">
+          <span class="text-2xl font-display text-primary font-bold">§</span>
+          <span class="text-xs tracking-[0.3em] uppercase hidden sm:block"
+            >Stoicism 101</span
+          >
+        </div>
+        <div
+          class="hidden md:flex items-center gap-12 text-xs tracking-widest uppercase font-medium"
+        >
+          <a class="hover:text-primary transition-colors" href="#">Home</a>
+          <a class="hover:text-primary transition-colors" href="#">About</a>
+          <a class="hover:text-primary transition-colors" href="#">Practices</a>
+          <a class="hover:text-primary transition-colors" href="#">Theory</a>
+        </div>
+        <div class="flex items-center gap-6">
+          <button
+            class="text-xs uppercase tracking-widest hover:text-primary border border-white/20 px-4 py-1 rounded-full transition-colors"
+          >
+            Explore
+          </button>
+          <span
+            class="material-icons-outlined cursor-pointer hover:text-primary"
+            >grid_view</span
+          >
+        </div>
+      </div>
+    </nav>
+    <main class="relative z-10 w-full overflow-hidden">
+      <section
+        class="relative min-h-screen flex flex-col items-center pt-32 pb-20"
+      >
+        <div
+          class="absolute top-1/4 left-0 w-full h-1/2 bg-gradient-radial from-blue-900/10 to-transparent dark:from-blue-500/5 dark:to-transparent pointer-events-none"
+        ></div>
+        <h1
+          class="font-display text-[15vw] leading-none text-gray-200 dark:text-white/5 absolute top-[15%] left-1/2 -translate-x-1/2 select-none z-0 tracking-widest opacity-20 dark:opacity-100 dark:text-stroke dark:text-transparent"
+        >
+          STOICISM
+        </h1>
+        <div
+          class="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-8 px-6 md:px-12 relative z-10 h-full"
+        >
+          <div
+            class="md:col-span-3 flex flex-col justify-center mt-20 md:mt-0 order-2 md:order-1"
+          >
+            <h3 class="font-serif text-2xl text-gray-900 dark:text-white mb-4">
+              Eudaimonia
+            </h3>
+            <p
+              class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-6 border-l border-primary/30 pl-4"
+            >
+              Often translated as "happiness", it is better understood as
+              "flourishing" or "living well". It is the highest human good, the
+              only goal worth pursuing for its own sake.
+            </p>
+            <a
+              class="flex items-center text-xs uppercase tracking-widest text-primary hover:text-white transition-colors gap-2 group"
+              href="#"
+            >
+              Read More
+              <span
+                class="material-icons-outlined text-sm group-hover:translate-x-1 transition-transform"
+                >arrow_right_alt</span
+              >
+            </a>
+          </div>
+          <div
+            class="md:col-span-6 flex flex-col items-center justify-start relative order-1 md:order-2"
+          >
+            <div class="relative w-full max-w-md aspect-[3/4]">
+              <img
+                alt="Marble Bust of Marcus Aurelius"
+                class="w-full h-full object-contain drop-shadow-2xl filter grayscale contrast-125 brightness-110"
+                src="p36.png"
+              />
+              <div
+                class="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-primary mix-blend-color-dodge rounded-full blur-xl opacity-60 animate-pulse"
+              ></div>
+              <div
+                class="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2"
+              >
+              </div>
+            </div>
+            <div
+              class="w-48 h-12 bg-black/20 dark:bg-black/60 rounded-[100%] blur-lg -mt-8"
+            ></div>
+          </div>
+          <div
+            class="md:col-span-3 flex flex-col justify-start md:justify-center items-end mt-10 md:mt-0 order-3 relative"
+          >
+            <div class="w-full max-w-[200px]">
+              <div
+                class="flex justify-between items-center mb-6 text-gray-500 dark:text-gray-500 text-xs tracking-widest border-b border-gray-300 dark:border-white/10 pb-2"
+              >
+                <span>End Lesson</span>
+                <span class="material-icons-outlined text-sm">info</span>
+              </div>
+              <div class="flex justify-between gap-2 mb-8">
+                <div class="text-center group cursor-pointer">
+                  <div
+                    class="w-10 h-10 rounded overflow-hidden mb-1 grayscale group-hover:grayscale-0 transition-all border border-transparent group-hover:border-primary/50"
+                  >
+                    <img
+                      class="w-full h-full object-cover"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_a6eAT26axjMfaEw8CcYT_RVfVyJ-1c5Nx7Y7PsrWsXruepay_JOqXYRVLtFVnqtCBHXA8RXBA5ono_7el6t_CVF1bF_ycZO0zU_pSNNF9huLU0aimmVdieit4Sa6cABxtS1PuhmFCxNWjZoOZ9fvJII362qm30aJlQURpbHJMCBvkN-XzX_TrqlebyMbF_TwQT6HvlPoZjBpH0FdS6U7Z5htKG_JuoR1eznciMVbqiiAVW6nI8lw-tjjIMIqwPMqBLAhgQ6uDxlD"
+                    />
+                  </div>
+                  <span
+                    class="text-[8px] uppercase tracking-wider block opacity-50"
+                    >Epictetus</span
+                  >
+                </div>
+                <div class="text-center group cursor-pointer">
+                  <div
+                    class="w-10 h-10 rounded overflow-hidden mb-1 grayscale group-hover:grayscale-0 transition-all border border-transparent group-hover:border-primary/50"
+                  >
+                    <img
+                      class="w-full h-full object-cover"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLGo1nBCciJAdXZrEZX9tUSjgjFwRnRWgizFa40sWqGDpWCdLbCQe4krrb-geyFfkY-bEJSZWJ1vp8B7KUi0csrAKy4bt9EzHgXMlenTjPkgBnEF_gRlOkelreYZZmS9lesxo59zmrmTncT3olPW1gRO15ThTEa1J3r8HatXAHqS4ZhYAOkt04wQKSNLN_epPjEzlLUnzpkNLEAPMEBs6SJ3GbmKa-aw2jrMObbZTMf7v_RTT7UASr7NhALLkvENaDrUuNccyLCYkH"
+                    />
+                  </div>
+                  <span
+                    class="text-[8px] uppercase tracking-wider block opacity-50"
+                    >Seneca</span
+                  >
+                </div>
+                <div class="text-center group cursor-pointer">
+                  <div
+                    class="w-10 h-10 rounded overflow-hidden mb-1 grayscale group-hover:grayscale-0 transition-all border border-transparent group-hover:border-primary/50"
+                  >
+                    <img
+                      class="w-full h-full object-cover"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFw2X_jOrFE8TO7QaqPbCg_rinkh_QFjoFdUGfINzj_MU3BMTGxPFrmYIIXx20RkeFUarBLheZACFQr5IYKTKTdVTcN6kpDuAJT_YxBuxkAF9TDaEEdENsnS-dYV4guEIPHaCLD8kb4MLLATXWbjrU0HwfQ8NAXoEPifCRL-tbr3v8KhuFHo5kBgnUzqgsgNcYiEMO7ss_DLd8d72Rn9S8xcQG_Ql0atuudsD0FEhcT7UM1Ln00wpBQjuFRE-wYITgHjuVSY2fvHI0"
+                    />
+                  </div>
+                  <span
+                    class="text-[8px] uppercase tracking-wider block opacity-50"
+                    >Zeno</span
+                  >
+                </div>
+              </div>
+              <div class="flex justify-end gap-4 mt-8">
+                <div
+                  class="h-px w-8 bg-gray-400 dark:bg-gray-600 my-auto"
+                ></div>
+                <button
+                  class="border border-gray-300 dark:border-white/20 px-4 py-1 text-[10px] uppercase tracking-widest hover:bg-primary hover:text-white transition-all rounded-full"
+                >
+                  Exports
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full max-w-5xl mx-auto mt-12 md:mt-2 relative h-40 hidden md:block"
+        >
+          <svg
+            class="absolute top-0 left-0 w-full h-full overflow-visible"
+            preserveAspectRatio="none"
+          >
+            <path
+              class="text-gray-300 dark:text-white/10"
+              d="M 0 50 Q 512 150 1024 50"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1"
+              vector-effect="non-scaling-stroke"
+            ></path>
+          </svg>
+          <div class="flex justify-between items-start px-20 relative -top-6">
+            <button
+              class="w-10 h-10 rounded-full border border-gray-300 dark:border-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors mt-12"
+            >
+              <span class="material-icons-outlined text-sm">arrow_back</span>
+            </button>
+            <div
+              class="flex flex-col items-center gap-2 transform translate-y-8 group cursor-pointer"
+            >
+              <div
+                class="w-16 h-20 overflow-hidden relative opacity-70 group-hover:opacity-100 transition-opacity"
+              >
+                <img
+                  alt="Epictetus"
+                  class="w-full h-full object-cover grayscale mix-blend-luminosity"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqgpRvh9d21ORD3dw-H7q3zX26R8k6mUy3dUWGKYoi90Oir7Lhak2-mBGn2dEtEpwElJdyobPF-V54tip1jdW117gHEgLRULJCKFrNUUvP1OwG5Z_0pHBqX8KOf2XQrVB8d6xwKUei0mxrzOc08AW0_tJZglaco2Pbn52lb4Tbnbnr5hJBIwg3yEN42NrYxynyyTwR5xevF3i6nPwyDb_T8q_HS47IgElfEGy9KUA2msrda8zbhYxktKx402be1f6jlNOnLIQjMwkE"
+                />
+              </div>
+              <div class="text-center">
+                <span class="block font-serif text-sm">Epictetus</span>
+                <span
+                  class="block text-[8px] uppercase tracking-widest text-gray-400"
+                  >Lesson</span
+                >
+              </div>
+            </div>
+            <div
+              class="flex flex-col items-center gap-2 transform translate-y-16 group cursor-pointer"
+            >
+              <div
+                class="w-20 h-24 overflow-hidden relative group-hover:scale-105 transition-transform"
+              >
+                <img
+                  alt="Chrysippus"
+                  class="w-full h-full object-cover grayscale mix-blend-luminosity"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcW2zebdVS-TO-9a3usdfysjPBIcV_UNumBDxNzXj-BJ3CfhShKCGXlJJL2a7LAB2EA8B8T0sP679eczlT3uDQWQc7pVFz3BP6cuFYcOYJt5WkvJ781K9TJLJ-JTOyi16dIlVcwjDv7ZfFhTg64UXkiswlPAw0nEHuFuN8dWx0ui1lZyCKFSuHuYsGpyqLgGJclJ4fURTaipCyKaCkkBDVWTa2nw6XqQox8mZ1eyuNJZmPUEU8y4VbH151Sbf6Qho27TdCI5meqqE-"
+                />
+              </div>
+              <div class="text-center">
+                <span class="block font-serif text-lg text-primary"
+                  >Chrysippus</span
+                >
+                <span
+                  class="block text-[8px] uppercase tracking-widest text-gray-400"
+                  >Lesson</span
+                >
+              </div>
+            </div>
+            <div
+              class="flex flex-col items-center gap-2 transform translate-y-8 group cursor-pointer"
+            >
+              <div
+                class="w-16 h-20 overflow-hidden relative opacity-70 group-hover:opacity-100 transition-opacity"
+              >
+                <img
+                  alt="Zeno"
+                  class="w-full h-full object-cover grayscale mix-blend-luminosity"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN_rDjq1kTezMUrTUYRdOgoQaLXz_jwVi2nhq2ppmL5aJ7d-QlFaVoCWvlYg98Ft6JzouTIib2VYgUPSxAMnR9wrU6pkl9hIQtQrHCY4mYomokLiuetpVpq4iJ5B517CfMeGlL-_KcEgztstD9iFFKxRzpzphb6M-S1UhDVIrzZmV8W3bUUttq43mNbZMusYYxa5-FNqcksPPotsVwcvJXb26ADcCsWilCzHX4MNi_IOSaNUEA1x1Xm9PjITvH6MslnTOyMJnrJE4x"
+                />
+              </div>
+              <div class="text-center">
+                <span class="block font-serif text-sm">Zeno</span>
+                <span
+                  class="block text-[8px] uppercase tracking-widest text-gray-400"
+                  >Lesson</span
+                >
+              </div>
+            </div>
+            <button
+              class="w-10 h-10 rounded-full border border-gray-300 dark:border-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors mt-12"
+            >
+              <span class="material-icons-outlined text-sm">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section
+        class="relative py-24 bg-gray-100 dark:bg-[#080d1a] border-t border-gray-200 dark:border-white/5"
+      >
+        <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+          <h2
+            class="text-4xl md:text-5xl font-serif text-center mb-16 text-gray-900 dark:text-gray-200"
+          >
+            General Practices
+          </h2>
+          <div
+            class="flex flex-wrap justify-center gap-8 md:gap-16 border-b border-gray-300 dark:border-white/10 pb-4 mb-20 text-xs md:text-sm uppercase tracking-widest"
+          >
+            <a
+              class="pb-4 border-b-2 border-primary text-primary font-bold"
+              href="#"
+              >Logic</a
+            >
+            <a
+              class="pb-4 border-b-2 border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+              href="#"
+              >Epistemology</a
+            >
+            <a
+              class="pb-4 border-b-2 border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+              href="#"
+              >Physics</a
+            >
+            <a
+              class="pb-4 border-b-2 border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+              href="#"
+              >Ethics</a
+            >
+            <a
+              class="pb-4 border-b-2 border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+              href="#"
+              >Passion</a
+            >
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+            <div class="space-y-6">
+              <h3 class="text-2xl font-serif text-gray-900 dark:text-gray-100">
+                Logic Theory
+              </h3>
+              <p
+                class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed font-light"
+              >
+                Stoicism is a school of Hellenistic philosophy founded by Zeno
+                of Citium in Athens in the early 3rd century BC. It is a
+                philosophy of personal ethics informed by its system of logic
+                and its views on the natural world.
+              </p>
+              <button
+                class="px-6 py-2 border border-gray-400 dark:border-white/20 rounded-full text-xs uppercase tracking-widest hover:bg-primary hover:border-primary hover:text-white transition-all"
+              >
+                Explore
+              </button>
+            </div>
+            <div class="relative flex justify-center">
+              <div
+                class="absolute top-1/2 left-0 w-full border-t border-dashed border-gray-400/30 dark:border-white/10 -z-10 hidden md:block"
+              ></div>
+              <div class="w-48 h-56 relative group">
+                <div
+                  class="absolute inset-0 bg-primary/20 blur-[60px] rounded-full group-hover:bg-primary/30 transition-all duration-700"
+                ></div>
+                <img
+                  alt="Golden Stoic"
+                  class="w-full h-full object-contain filter sepia hue-rotate-15 contrast-125 saturate-150 drop-shadow-2xl relative z-10"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaAj84unw8Mp3pa5KgSuPgN2E6f7n3sp2r-BrGS7Cok76CV8cYoQgh3R8mHLlQ8tWi9h5iTi4-mxcOBqtIWOpekCEUmG5CseJ5zFif26-L83fE8Qiwv0_a8lr6RR0v-mvxpzcOqKh6kX1zfwOAMMCDnZSQJ4XfHjZJj-0-Qcrruv_TJm_7ryU_jZq0EbDpWMfNlP65QNKp4YK8uSUq0iXOiDkHYW4oe0CwnnyfvuY0SfMzCWaZGP4oOIgy_zSfik4LE9cETlSSIHtF"
+                  style="
+                    mask-image: linear-gradient(
+                      to bottom,
+                      black 80%,
+                      transparent 100%
+                    );
+                    -webkit-mask-image: linear-gradient(
+                      to bottom,
+                      black 80%,
+                      transparent 100%
+                    );
+                  "
+                />
+              </div>
+            </div>
+            <div class="space-y-4">
+              <div
+                class="flex justify-between items-center text-xs tracking-widest text-gray-500 mb-2"
+              >
+                <span>Logic .01</span>
+                <div class="flex gap-1">
+                  <div class="w-1 h-1 bg-primary rounded-full"></div>
+                  <div class="w-1 h-1 bg-gray-600 rounded-full"></div>
+                  <div class="w-1 h-1 bg-gray-600 rounded-full"></div>
+                  <div class="w-1 h-1 bg-gray-600 rounded-full"></div>
+                </div>
+              </div>
+              <h4 class="font-serif text-lg text-gray-900 dark:text-gray-200">
+                Logic: A1
+              </h4>
+              <p
+                class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed font-light"
+              >
+                Logic provides the framework for understanding the world
+                correctly. Without logic, our perceptions can deceive us,
+                leading to false judgments and emotional turmoil.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="relative min-h-[80vh] flex items-center overflow-hidden">
+        <div
+          class="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12 px-6 md:px-12 relative z-10 h-full"
+        >
+          <div
+            class="relative h-[60vh] md:h-[80vh] flex items-end justify-center md:justify-start"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-background-light dark:from-background-dark via-transparent to-transparent z-10"
+            ></div>
+            <img
+              alt="Muscular Marble Statue"
+              class="h-full w-auto object-cover object-center filter grayscale contrast-125 brightness-90 mask-image-b"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCd00O54yb3m6iSMKlvqu5nEkzS8X8PF7iLKxbffRr03xfYI10HDkrYvkzQrX3h5j6TVLCHk6J9CZXx5eHTMcCPQJB7suOX6rOLWJGvJN4FvJZXIfxB-MqQvra6sg7uFNrGnRJsDgD8O2nLoOpIHdlO2O9Gj7ORzuRed-fgPy5bKlQRDqisyw69i8mm3392Eeel0X4dIXFwbdR7a5ioCCrYEfYUkrZFgYso7f6LwOshbPBjE4ES2Pt3e61889gkLnYrpHfuuQvNkKjk"
+              style="
+                -webkit-mask-image: linear-gradient(
+                  to top,
+                  transparent 0%,
+                  black 30%
+                );
+                mask-image: linear-gradient(to top, transparent 0%, black 30%);
+              "
+            />
+            <div
+              class="absolute left-0 top-1/2 -rotate-90 origin-left text-[10px] tracking-[0.5em] text-gray-400 uppercase hidden md:block"
+            >
+              Questions
+            </div>
+          </div>
+          <div class="flex flex-col justify-center pb-20 md:pb-0">
+            <h2
+              class="font-serif text-5xl md:text-7xl leading-tight mb-8 text-gray-900 dark:text-white"
+            >
+              Why we need <br />
+              <span class="italic font-light text-gray-500 dark:text-gray-400"
+                >philosophy</span
+              >
+            </h2>
+            <div class="ml-auto max-w-md space-y-8">
+              <p
+                class="text-sm text-gray-600 dark:text-gray-400 leading-loose text-justify font-light"
+              >
+                Stoicism is a school of Hellenistic philosophy founded by Zeno
+                of Citium in Athens in the early 3rd century BC. It is a
+                philosophy of personal ethics informed by its system of logic
+                and its views on the natural world.
+              </p>
+              <div
+                class="flex items-center justify-end gap-6 pt-8 border-t border-gray-300 dark:border-white/10"
+              >
+                <button
+                  class="flex items-center gap-2 text-xs uppercase tracking-widest hover:text-primary transition-colors"
+                >
+                  <span class="material-icons-outlined text-lg"
+                    >play_circle</span
+                  >
+                  Watch Video
+                </button>
+                <button
+                  class="px-6 py-2 border border-gray-400 dark:border-white/20 rounded-full text-xs uppercase tracking-widest hover:bg-white hover:text-black transition-all"
+                >
+                  Explore
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute bottom-10 right-12 flex gap-12 text-[10px] uppercase tracking-widest text-gray-500 z-20 hidden md:flex"
+        >
+          <div class="flex flex-col gap-2 text-right">
+            <a class="hover:text-primary" href="#">Home</a>
+            <a class="hover:text-primary" href="#">About</a>
+            <a class="hover:text-primary" href="#">Library</a>
+            <a class="hover:text-primary" href="#">Practice</a>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <span class="text-2xl font-display text-primary font-bold">§</span>
+            <span class="text-[8px] opacity-50">© 2023 STOICISM</span>
+          </div>
+        </div>
+        <div class="absolute bottom-10 left-[35%] z-20 hidden md:block">
+          <div
+            class="border border-gray-300 dark:border-white/10 rounded-full px-6 py-2 backdrop-blur-sm"
+          >
+            <span class="text-[10px] uppercase tracking-widest text-gray-400"
+              >Exports</span
+            >
+          </div>
+          <div class="flex gap-4 mt-3 ml-2 text-gray-500">
+            <span
+              class="material-icons-outlined text-xs hover:text-primary cursor-pointer"
+              >share</span
+            >
+            <span
+              class="material-icons-outlined text-xs hover:text-primary cursor-pointer"
+              >bookmark</span
+            >
+            <span
+              class="material-icons-outlined text-xs hover:text-primary cursor-pointer"
+              >download</span
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      // Simple dark mode toggle for testing (optional based on prompt requirements but good for verification)
+      // Check local storage or system preference
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark"); // Default to light if preference dictates, though design implies dark primarily
+        // Force Dark for demo purposes to match screenshot as default if no preference
+        document.documentElement.classList.add("dark");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,799 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Edura - Online Education Platform</title>
+    <meta
+      content="Online Education Landing Page Replication"
+      name="description"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2B4EFF", // Vivid Blue from screenshot
+              secondary: "#0E1133", // Dark Navy
+              "background-light": "#F5F7FA",
+              "background-dark": "#0F172A",
+              "card-light": "#FFFFFF",
+              "card-dark": "#1E293B",
+              "text-main-light": "#0E1133",
+              "text-main-dark": "#F1F5F9",
+              "text-muted-light": "#505056",
+              "text-muted-dark": "#94A3B8",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+            },
+            boxShadow: {
+              soft: "0 10px 40px -10px rgba(0,0,0,0.08)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .blob-shape {
+        border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+      }
+    </style>
+  </head>
+  <body
+    class="font-display bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark transition-colors duration-300 antialiased"
+  >
+    <div
+      class="bg-secondary text-white text-xs py-2 hidden md:block dark:bg-black"
+    >
+      <div class="container mx-auto px-4 flex justify-between items-center">
+        <div class="flex items-center space-x-6">
+          <span class="flex items-center gap-1"
+            ><span class="material-icons-round text-sm">phone</span> +1 (212)
+            555-0199</span
+          >
+          <span class="flex items-center gap-1"
+            ><span class="material-icons-round text-sm">email</span>
+            info@edura.com</span
+          >
+          <span class="flex items-center gap-1"
+            ><span class="material-icons-round text-sm">schedule</span> Mon -
+            Sat: 8:00 - 15:00</span
+          >
+        </div>
+        <div class="flex items-center space-x-4">
+          <span>Follow Us:</span>
+          <div class="flex space-x-2 opacity-80">
+            <a class="hover:text-primary transition" href="#"
+              ><i class="material-icons-round text-sm">facebook</i></a
+            >
+            <a class="hover:text-primary transition" href="#"
+              ><i class="material-icons-round text-sm">share</i></a
+            >
+            <a class="hover:text-primary transition" href="#"
+              ><i class="material-icons-round text-sm">work</i></a
+            >
+          </div>
+          <span
+            class="border-l border-white/20 pl-4 flex items-center gap-1 cursor-pointer hover:text-primary transition"
+          >
+            <span class="material-icons-round text-sm">person</span> Login /
+            Register
+          </span>
+        </div>
+      </div>
+    </div>
+    <nav
+      class="bg-card-light dark:bg-card-dark sticky top-0 z-50 shadow-sm border-b border-gray-100 dark:border-gray-800"
+    >
+      <div
+        class="container mx-auto px-4 h-20 flex items-center justify-between"
+      >
+        <a class="flex items-center gap-2" href="#">
+          <div
+            class="w-8 h-8 bg-primary rounded text-white flex items-center justify-center font-bold text-lg"
+          >
+            E
+          </div>
+          <span
+            class="text-2xl font-bold tracking-tight text-secondary dark:text-white"
+            >EDURA</span
+          >
+        </a>
+        <div
+          class="hidden lg:flex items-center space-x-8 font-medium text-sm text-text-main-light dark:text-gray-300"
+        >
+          <a class="text-primary flex items-center gap-1" href="#"
+            >Home
+            <span class="material-icons-round text-sm">expand_more</span></a
+          >
+          <a
+            class="hover:text-primary transition flex items-center gap-1"
+            href="#"
+            >Courses
+            <span class="material-icons-round text-sm">expand_more</span></a
+          >
+          <a
+            class="hover:text-primary transition flex items-center gap-1"
+            href="#"
+            >Teachers
+            <span class="material-icons-round text-sm">expand_more</span></a
+          >
+          <a
+            class="hover:text-primary transition flex items-center gap-1"
+            href="#"
+            >Pages
+            <span class="material-icons-round text-sm">expand_more</span></a
+          >
+          <a
+            class="hover:text-primary transition flex items-center gap-1"
+            href="#"
+            >Blog
+            <span class="material-icons-round text-sm">expand_more</span></a
+          >
+          <a class="hover:text-primary transition" href="#">Contact</a>
+        </div>
+        <div class="flex items-center gap-4">
+          <div
+            class="hidden xl:flex items-center bg-gray-100 dark:bg-slate-800 rounded-full px-4 py-2"
+          >
+            <input
+              class="bg-transparent border-none focus:ring-0 text-sm w-32 dark:text-white placeholder-gray-500"
+              placeholder="Search for Courses..."
+              type="text"
+            />
+            <span
+              class="material-icons-round text-gray-400 text-sm cursor-pointer"
+              >search</span
+            >
+          </div>
+          <button
+            class="relative p-2 text-text-main-light dark:text-white hover:text-primary transition"
+          >
+            <span class="material-icons-round">shopping_cart</span>
+            <span
+              class="absolute top-0 right-0 w-4 h-4 bg-primary text-white text-[10px] rounded-full flex items-center justify-center"
+              >0</span
+            >
+          </button>
+          <button
+            class="relative p-2 text-text-main-light dark:text-white hover:text-primary transition hidden sm:block"
+          >
+            <span class="material-icons-round">favorite_border</span>
+            <span
+              class="absolute top-0 right-0 w-4 h-4 bg-primary text-white text-[10px] rounded-full flex items-center justify-center"
+              >0</span
+            >
+          </button>
+          <button
+            class="hidden sm:block bg-primary hover:bg-blue-700 text-white px-6 py-2.5 rounded-md font-semibold text-sm transition shadow-lg shadow-blue-500/30"
+          >
+            CONTACT US
+          </button>
+          <button class="lg:hidden p-2 text-text-main-light dark:text-white">
+            <span class="material-icons-round">menu</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <header
+      class="relative overflow-hidden bg-[#EEF0F6] dark:bg-slate-900 pt-16 pb-20 lg:pb-32 lg:pt-24"
+    >
+      <div
+        class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none"
+      >
+        <div
+          class="absolute -left-10 top-20 w-64 h-64 bg-blue-200/20 rounded-full blur-3xl dark:bg-blue-900/20"
+        ></div>
+        <div
+          class="absolute right-0 bottom-0 w-96 h-96 bg-purple-200/20 rounded-full blur-3xl dark:bg-purple-900/20"
+        ></div>
+        <div
+          class="absolute bottom-10 left-1/4 grid grid-cols-6 gap-2 opacity-10"
+        >
+          <div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+          <div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+          <div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+          <div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+          <div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+          <div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+          <div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+          <div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+          <div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+        </div>
+      </div>
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="flex flex-col lg:flex-row items-center">
+          <div class="w-full lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white dark:bg-slate-800 shadow-sm border border-gray-100 dark:border-slate-700 mb-6"
+            >
+              <span class="w-2 h-2 rounded-full bg-red-500"></span>
+              <span
+                class="text-xs font-bold text-text-muted-light dark:text-gray-300 uppercase tracking-wide"
+                >Online Learning Course</span
+              >
+            </div>
+            <h1
+              class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-secondary dark:text-white leading-[1.15] mb-6"
+            >
+              Online Education <br />
+              <span class="text-primary">Feels Like</span> Real Classroom
+            </h1>
+            <div
+              class="flex flex-wrap gap-6 mb-8 text-sm font-medium text-text-muted-light dark:text-gray-400"
+            >
+              <div class="flex items-center gap-2">
+                <span class="material-icons-round text-primary text-base"
+                  >check_circle</span
+                >
+                Get Certified
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="material-icons-round text-primary text-base"
+                  >check_circle</span
+                >
+                Gain Job-ready Skills
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="material-icons-round text-primary text-base"
+                  >check_circle</span
+                >
+                Great Life
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-4">
+              <button
+                class="bg-primary hover:bg-blue-700 text-white px-8 py-3.5 rounded-md font-semibold shadow-lg shadow-blue-500/30 transition flex items-center gap-2"
+              >
+                GET STARTED
+                <span class="material-icons-round text-sm">arrow_forward</span>
+              </button>
+              <button
+                class="bg-white dark:bg-slate-800 text-secondary dark:text-white hover:bg-gray-50 dark:hover:bg-slate-700 border border-gray-200 dark:border-slate-700 px-8 py-3.5 rounded-md font-semibold transition flex items-center gap-2"
+              >
+                OUR COURSES
+                <span class="material-icons-round text-sm"
+                  >play_circle_outline</span
+                >
+              </button>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2 relative flex justify-center">
+            <div
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] md:w-[500px] md:h-[500px] border-2 border-primary/30 rounded-full dark:border-primary/20"
+            ></div>
+            <div
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] md:w-[420px] md:h-[420px] bg-yellow-400/20 rounded-full blur-2xl dark:bg-yellow-600/10"
+            ></div>
+            <img
+              alt="Smiling student holding books"
+              class="relative z-10 w-full max-w-md lg:max-w-lg object-contain drop-shadow-2xl mask-image-bottom"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLMV8bTUNamVHXkgMfCW-yQ1WfMfFuSP_TsGq3sD7So--5umMw13-HFANoj7pbmI12m5vsUFlWZ2UWcZ0OiBz4b9xvKLVgxlTEzYH1Z-Q4XLcWRFRnhhTAuhGfhtO-eEhBKvnQmaMynGIK60bN2JySORYsrWOBWSCdxacmCcw-f6Qgs6TP37aQShannSSbASxH7b99_nzPMa3t2-xAFoBFXPnE9nnJbQiDi4hRtvc5DnG58bLvIaG4EN9K-8P0mSeV8zFg3MHC-mo5"
+            />
+            <div
+              class="absolute bottom-10 left-0 md:left-10 z-20 bg-white dark:bg-slate-800 p-3 rounded-xl shadow-lg flex items-center gap-3 animate-bounce"
+              style="animation-duration: 3s"
+            >
+              <div
+                class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-primary"
+              >
+                <span class="material-icons-round">school</span>
+              </div>
+              <div>
+                <p
+                  class="text-lg font-bold text-secondary dark:text-white leading-tight"
+                >
+                  16500+
+                </p>
+                <p class="text-xs text-text-muted-light dark:text-gray-400">
+                  Active Students
+                </p>
+              </div>
+            </div>
+            <div
+              class="absolute top-20 right-0 md:right-10 z-20 bg-white dark:bg-slate-800 p-3 rounded-xl shadow-lg flex items-center gap-3 animate-bounce"
+              style="animation-duration: 4s"
+            >
+              <div
+                class="w-10 h-10 rounded-full bg-red-100 dark:bg-red-900/50 flex items-center justify-center text-red-500"
+              >
+                <span class="material-icons-round">play_lesson</span>
+              </div>
+              <div>
+                <p
+                  class="text-lg font-bold text-secondary dark:text-white leading-tight"
+                >
+                  7500+
+                </p>
+                <p class="text-xs text-text-muted-light dark:text-gray-400">
+                  Online Video Course
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section
+      class="bg-white dark:bg-card-dark border-y border-gray-100 dark:border-gray-800"
+    >
+      <div class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div class="flex items-center gap-3 justify-center lg:justify-start">
+            <div
+              class="w-10 h-10 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-primary"
+            >
+              <span class="material-icons-round text-xl">menu_book</span>
+            </div>
+            <span class="text-sm font-bold text-secondary dark:text-gray-200"
+              >25k+ Online Courses</span
+            >
+          </div>
+          <div class="flex items-center gap-3 justify-center lg:justify-start">
+            <div
+              class="w-10 h-10 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-primary"
+            >
+              <span class="material-icons-round text-xl">all_inclusive</span>
+            </div>
+            <span class="text-sm font-bold text-secondary dark:text-gray-200"
+              >Lifetime Access</span
+            >
+          </div>
+          <div class="flex items-center gap-3 justify-center lg:justify-start">
+            <div
+              class="w-10 h-10 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-primary"
+            >
+              <span class="material-icons-round text-xl">monetization_on</span>
+            </div>
+            <span class="text-sm font-bold text-secondary dark:text-gray-200"
+              >Value For Money</span
+            >
+          </div>
+          <div class="flex items-center gap-3 justify-center lg:justify-start">
+            <div
+              class="w-10 h-10 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-primary"
+            >
+              <span class="material-icons-round text-xl">support_agent</span>
+            </div>
+            <span class="text-sm font-bold text-secondary dark:text-gray-200"
+              >Lifetime Support</span
+            >
+          </div>
+          <div class="flex items-center gap-3 justify-center lg:justify-start">
+            <div
+              class="w-10 h-10 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-primary"
+            >
+              <span class="material-icons-round text-xl">groups</span>
+            </div>
+            <span class="text-sm font-bold text-secondary dark:text-gray-200"
+              >Community Support</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-20 bg-background-light dark:bg-background-dark">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+          <div class="w-full lg:w-1/2 relative">
+            <div class="relative w-full aspect-square max-w-[500px] mx-auto">
+              <img
+                alt="Group of students working"
+                class="absolute inset-0 w-3/4 h-3/4 object-cover rounded-2xl shadow-xl z-10 border-4 border-white dark:border-card-dark"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp9wx8udsRiai3I8zYowJmdMWj64nn-SMk7Xk3fI0mjEvVF1S-EP6i4YUJP6Fxn--s5ObWwgYBKCQzdqDkwmUqQZvOdu6dYH7tecIHaajIPd5PxBaeAP2R9ufeFArLpWVCEGPmK31hqJzLI9PH1ASiRpil0wrsdhoQsAe-7nmkn_U-PsAItj6KgSd9YQ6F8CIRV0nxkfK8Yupqaol0UmS-OF6wFdsbDviQGEue-CWY9Hxu7u_zpJICmDNm0o5yfhqHUCp-oqkS6mar"
+              />
+              <img
+                alt="Students learning"
+                class="absolute bottom-0 right-0 w-3/5 h-3/5 object-cover rounded-2xl shadow-2xl z-20 border-4 border-white dark:border-card-dark"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbKC3Ybqw8o8qrvpEjK9MtafRdAnyY9IEz9dajO42GGW6NigwzWSMjF806BdQtOYM4S27anSWJt7lgGXi2HhWZPrjNwMEZXAfximQp4oejerH71YTSw6Fkoc5is8hm8cV-m2ZfN5hELKFBcoErHAMAlfYMPxXpX1BJJYSpFJMBP6zPT_go7bhSUTFdUss3NN3-O0lihYe25Llzobs102-uC3UPRIQCJcI-bNZKNHW_8deEoAYQq-j7R7dKKljd9GBQpm3no0_20IFw"
+              />
+              <div
+                class="absolute top-10 right-10 z-30 bg-white dark:bg-card-dark p-4 rounded-full shadow-lg border border-gray-100 dark:border-gray-700 w-24 h-24 flex flex-col items-center justify-center text-center"
+              >
+                <span class="text-primary font-bold text-xl">25+</span>
+                <span
+                  class="text-[10px] font-bold text-secondary dark:text-gray-300 leading-tight"
+                  >YEARS<br />EXP.</span
+                >
+                <div
+                  class="absolute inset-0 border-2 border-dashed border-primary/30 rounded-full animate-spin-slow"
+                ></div>
+              </div>
+              <div
+                class="absolute -bottom-10 -left-10 z-0 opacity-20 text-primary"
+              >
+                <svg
+                  fill="currentColor"
+                  height="100"
+                  viewBox="0 0 100 100"
+                  width="100"
+                >
+                  <pattern
+                    height="20"
+                    id="dots"
+                    patternUnits="userSpaceOnUse"
+                    width="20"
+                    x="0"
+                    y="0"
+                  >
+                    <circle cx="2" cy="2" r="2"></circle>
+                  </pattern>
+                  <rect fill="url(#dots)" height="100" width="100"></rect>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2">
+            <span
+              class="text-primary font-bold uppercase tracking-wider text-sm mb-2 block"
+              >Get to Know About Us</span
+            >
+            <h2
+              class="text-3xl md:text-4xl font-extrabold text-secondary dark:text-white mb-6 leading-tight"
+            >
+              Dive into our Online Courses and Ignite Your Learning!
+            </h2>
+            <p
+              class="text-text-muted-light dark:text-text-muted-dark mb-8 leading-relaxed"
+            >
+              Collaboratively simplify user-friendly networks after
+              principle-centered coordinate effective methods of empowerment
+              distributed niche markets business potential positioning readiness
+              after resource sucking systems.
+            </p>
+            <div class="space-y-4 mb-8">
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-5 h-5 rounded bg-primary text-white flex items-center justify-center"
+                >
+                  <span class="material-icons-round text-xs">check</span>
+                </div>
+                <span class="text-secondary dark:text-gray-200 font-medium"
+                  >It's easy to design our own video systems simulation</span
+                >
+              </div>
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-5 h-5 rounded bg-primary text-white flex items-center justify-center"
+                >
+                  <span class="material-icons-round text-xs">check</span>
+                </div>
+                <span class="text-secondary dark:text-gray-200 font-medium"
+                  >Super easier free 100% with a secure</span
+                >
+              </div>
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-5 h-5 rounded bg-primary text-white flex items-center justify-center"
+                >
+                  <span class="material-icons-round text-xs">check</span>
+                </div>
+                <span class="text-secondary dark:text-gray-200 font-medium"
+                  >Learn to big companies top companies work</span
+                >
+              </div>
+            </div>
+            <button
+              class="bg-primary hover:bg-blue-700 text-white px-8 py-3 rounded-md font-semibold shadow-lg shadow-blue-500/30 transition"
+            >
+              ABOUT MORE +
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-20 bg-[#EEF0F6] dark:bg-slate-900">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <span
+            class="text-primary font-bold uppercase tracking-wider text-sm mb-2 block"
+            >Popular Courses</span
+          >
+          <h2
+            class="text-3xl md:text-4xl font-extrabold text-secondary dark:text-white"
+          >
+            Our Popular Online Courses
+          </h2>
+        </div>
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+          <button
+            class="bg-primary text-white px-6 py-3 rounded-lg flex items-center gap-2 shadow-lg shadow-blue-500/30 transition"
+          >
+            <span class="material-icons-round">analytics</span> Digital
+            Marketing
+            <span class="text-xs bg-white/20 px-1.5 rounded">250 Courses</span>
+          </button>
+          <button
+            class="bg-white dark:bg-card-dark text-text-muted-light dark:text-gray-300 hover:text-primary dark:hover:text-primary px-6 py-3 rounded-lg flex items-center gap-2 shadow-sm transition"
+          >
+            <span class="material-icons-round">brush</span> UI/UX Design
+            <span class="text-xs bg-gray-100 dark:bg-slate-700 px-1.5 rounded"
+              >150 Courses</span
+            >
+          </button>
+          <button
+            class="bg-white dark:bg-card-dark text-text-muted-light dark:text-gray-300 hover:text-primary dark:hover:text-primary px-6 py-3 rounded-lg flex items-center gap-2 shadow-sm transition"
+          >
+            <span class="material-icons-round">design_services</span> Graphic
+            Design
+            <span class="text-xs bg-gray-100 dark:bg-slate-700 px-1.5 rounded"
+              >50 Courses</span
+            >
+          </button>
+          <button
+            class="bg-white dark:bg-card-dark text-text-muted-light dark:text-gray-300 hover:text-primary dark:hover:text-primary px-6 py-3 rounded-lg flex items-center gap-2 shadow-sm transition"
+          >
+            <span class="material-icons-round">code</span> Web Development
+            <span class="text-xs bg-gray-100 dark:bg-slate-700 px-1.5 rounded"
+              >120 Courses</span
+            >
+          </button>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+          <div
+            class="bg-white dark:bg-card-dark rounded-xl overflow-hidden shadow-soft group hover:-translate-y-1 transition duration-300"
+          >
+            <div class="relative">
+              <img
+                alt="Digital Marketing"
+                class="w-full h-48 object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6QMvPpf4RFxehjVd6Pz1yXm3YS1G2bbXfSCEf9rl3C7LM4E3cbeTRy-S0tV00W8zNPPqVn3AoDbg513KW_38gdUOEPrX_sChAIlFPZaEoN2uAsvzPi7kaO9YQp1vUlAU08U6mUTZfj9fn-s79RAPUVGbiemzx2IOuu1GZI_XPozJ3oudOrdbU4iTHj0Y6ANOZP4Qtx200ZdRTzpAnecJc7L35eXv5Kw_hlrOOya677BlbzZ84_8-Wjr2vv8_m09-IRpWhZKlxIFhu"
+              />
+              <div
+                class="absolute top-4 left-4 bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded"
+              >
+                24 WEEKS
+              </div>
+            </div>
+            <div class="p-5">
+              <div class="flex items-center text-yellow-400 text-xs mb-2 gap-1">
+                <span class="material-icons-round text-sm">star</span>
+                <span class="material-icons-round text-sm">star</span>
+                <span class="material-icons-round text-sm">star</span>
+                <span class="material-icons-round text-sm">star</span>
+                <span class="material-icons-round text-sm text-gray-300"
+                  >star</span
+                >
+                <span class="text-gray-400 ml-1">(4.5)</span>
+              </div>
+              <h3
+                class="text-lg font-bold text-secondary dark:text-white mb-3 hover:text-primary transition cursor-pointer leading-tight"
+              >
+                Learn Figma - UI/UX Design Essential Training
+              </h3>
+              <div
+                class="flex items-center justify-between text-xs text-text-muted-light dark:text-gray-400 border-b border-gray-100 dark:border-gray-700 pb-4 mb-4"
+              >
+                <div class="flex items-center gap-1">
+                  <span class="material-icons-round text-sm">schedule</span> 2
+                  hours
+                </div>
+                <div class="flex items-center gap-1">
+                  <span class="material-icons-round text-sm">people</span> 12
+                  Students
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <img
+                    alt="Instructor"
+                    class="w-8 h-8 rounded-full"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1TM4R-ZB1jPK3kcmNOlzsEN35cpMgsNhBFB9Dw5aeYO_CS4G1OQ0YZM25C3jXEvE_6VjdOPEgw05ymUGld8uTRHw3Df-E_HgVIp_PX08ckFvs0fFvgjFplC7ofRZ5G3KMWLa81yZ0TJiodqPuJedgsyzXVXvB_t0ODkjy15fOtHzIdinVDWD-zAzG4VD-dEvZrh-jzhuWKEqxfoNH_-LqFMGXplN6C6Bsr2sf-hUnP3GK9rCBv5tW5GwtFTTHO9JQdrySLXnG9cBx"
+                  />
+                  <span
+                    class="text-sm font-medium text-secondary dark:text-gray-200"
+                    >Kevin Perry</span
+                  >
+                </div>
+                <span class="text-red-500 font-bold text-sm">FREE</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-card-dark rounded-xl overflow-hidden shadow-soft group hover:-translate-y-1 transition duration-300"
+          >
+            <div class="relative">
+              <img
+                alt="Education Software"
+                class="w-full h-48 object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz5Y6oFeN0tsUXEPKTrMeZgVyEHZI-71lhYWnrcIzjXnpBGZarAzrYtpt6bT7nhXnjbFClD1jWhWKNkJree_kaKOtf0jxTTmqCtpCuXSobLENcGTdAQ_myrZUjpn1yYbV7lGTdrrAzyWGLuvMrBihYS3slHdvvBxP2XGSyF45TpulsDH-4Jzs1K4JpljIQ8A_5-yrHXxwrJr3KVoaMsu-QZ-61sw4Hp0gfYGAAB9tr2KUnMf5VaIYucHbxtVhKUhoi6-USdHYHYQhz"
+              />
+              <div
+                class="absolute top-4 left-4 bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded"
+              >
+                12 WEEKS
+              </div>
+            </div>
+            <div class="p-5">
+              <div class="flex items-center text-yellow-400 text-xs mb-2 gap-1">
+                <span class="material-icons-round text-sm">star</span>
+                <span class="material-icons-round text-sm">star</span>
+                <span class="material-icons-round text-sm">star</span>
+                <span class="material-icons-round text-sm">star</span>
+                <span class="material-icons-round text-sm">star</span>
+                <span class="text-gray-400 ml-1">(5.0)</span>
+              </div>
+              <h3
+                class="text-lg font-bold text-secondary dark:text-white mb-3 hover:text-primary transition cursor-pointer leading-tight"
+              >
+                Education Software and PHP and JS System Script
+              </h3>
+              <div
+                class="flex items-center justify-between text-xs text-text-muted-light dark:text-gray-400 border-b border-gray-100 dark:border-gray-700 pb-4 mb-4"
+              >
+                <div class="flex items-center gap-1">
+                  <span class="material-icons-round text-sm">schedule</span> 4
+                  hours
+                </div>
+                <div class="flex items-center gap-1">
+                  <span class="material-icons-round text-sm">people</span> 30
+                  Students
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <img
+                    alt="Instructor"
+                    class="w-8 h-8 rounded-full"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiYc_-lreEKBoEaPU151nRzzD33eBuMTUSkW5KRVED2Wn-g9WZ9dOC21MKLR_QETZP3bdwZnqb_klwhiDbWnNG5aotdsZYhEcfaoUgrRJg2mWZtG1HAJgxBG1nqBwoheJAPKj72sdbSG7M9J6cUiW1Z9r6kRvcQB666HKbMn2VbMEofGUETn2mtkBhu1VzOqT-Dmw69XhffM7qDtePhHcjEgckAQjYPUIKKn0kPtRsSAwwIB-tUur1W7g-ZesGohc-5hdQrdoj2dDA"
+                  />
+                  <span
+                    class="text-sm font-medium text-secondary dark:text-gray-200"
+                    >Mellissa Jo</span
+                  >
+                </div>
+                <span class="text-red-500 font-bold text-sm">$49.00</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-card-dark rounded-xl overflow-hidden shadow-soft group hover:-translate-y-1 transition duration-300"
+          >
+            <div class="relative">
+              <img
+                alt="Data Science"
+                class="w-full h-48 object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZMTyxGOWZ_HMbi8PZWuQwWXccyyHCBlJXX8mB-KveVQRgohJ5Ep1igGUlpHEcPNl0gAm_B9EFIWKK6s4wjtAwu31pYe-QruSVKgrF9nqZxVzmZj_TaJWnLoJRWwiH5waep6bWnlPCTe2sQrDUlgjDRri9A5eSGOre-qeT5kOMUm-osW6M0cUu4Yv6EjrZ3nGmQvgz1YF-hwsVKwPuabvOYFhgN7IGmWPzrfwpJP1HxYCylOkXpptfbbDkSXDt1Ay3VtoeJVT57XW8"
+              />
+              <div
+                class="absolute top-4 left-4 bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded"
+              >
+                08 WEEKS
+              </div>
+            </div>
+            <div class="p-5">
+              <div class="flex items-center text-yellow-400 text-xs mb-2 gap-1">
+                <span class="material-icons-round text-sm">star</span>
+                <span class="material-icons-round text-sm">star</span>
+                <span class="material-icons-round text-sm">star</span>
+                <span class="material-icons-round text-sm">star</span>
+                <span class="material-icons-round text-sm text-gray-300"
+                  >star</span
+                >
+                <span class="text-gray-400 ml-1">(4.8)</span>
+              </div>
+              <h3
+                class="text-lg font-bold text-secondary dark:text-white mb-3 hover:text-primary transition cursor-pointer leading-tight"
+              >
+                R Statistics Data Science and Business Analysis
+              </h3>
+              <div
+                class="flex items-center justify-between text-xs text-text-muted-light dark:text-gray-400 border-b border-gray-100 dark:border-gray-700 pb-4 mb-4"
+              >
+                <div class="flex items-center gap-1">
+                  <span class="material-icons-round text-sm">schedule</span> 8
+                  hours
+                </div>
+                <div class="flex items-center gap-1">
+                  <span class="material-icons-round text-sm">people</span> 18
+                  Students
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <img
+                    alt="Instructor"
+                    class="w-8 h-8 rounded-full"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTs0bOnNvIaT_NQybOcfXIrH-M-7WQ227r_aYP0uqBre5t1Wu9MD_Jp84eDyNLehVRuMFeCQzGc5eu2G9qT-aRUSvdvmPrn6LNNuWFXkC9rdvOlbY12-9NcwqJW1eF4fWeAXgoxbomrJFnrrd_ZOviL3h2yc7P7B5H7jhaEJDLgzaMgSMMG6I4_Hxi-nuxWgiRuX7dWSLMuwqayWi1npAv9KpDmvUBVQPKhCT3rASmUp89eH_TD81bGgwUcUOKQDB8HRD0xBxfZXye"
+                  />
+                  <span
+                    class="text-sm font-medium text-secondary dark:text-gray-200"
+                    >Lisa Doe</span
+                  >
+                </div>
+                <span class="text-red-500 font-bold text-sm">FREE</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-card-dark rounded-xl overflow-hidden shadow-soft group hover:-translate-y-1 transition duration-300"
+          >
+            <div class="relative">
+              <img
+                alt="Android Dev"
+                class="w-full h-48 object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1X1RkEgmzTKjYaZSK4i8W2G0AOUDZOfZJ647CgADxJhgQeTTn5s9zIgCIygJAo2lZvjXmYNdROyV9qzzipNznJ1iDGOXcCEonEuhS7qKWf2U3Pxcy_gjgmkUNX3fNY42a4Kt92U4wsZCCSJBI42m8TQKybR1jHShkPKEnqhkt9z6jqvLzqGMgvB69LWWRjGU4T7Ery45BvY-cEkQUgQy5h7vxP3KwRf4CnWlx804XdxRCKeb9a7QW30YDLdtYn3J2Ml4yjFMMkcVh"
+              />
+              <div
+                class="absolute top-4 left-4 bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded"
+              >
+                32 WEEKS
+              </div>
+            </div>
+            <div class="p-5">
+              <div class="flex items-center text-yellow-400 text-xs mb-2 gap-1">
+                <span class="material-icons-round text-sm">star</span>
+                <span class="material-icons-round text-sm">star</span>
+                <span class="material-icons-round text-sm">star</span>
+                <span class="material-icons-round text-sm">star</span>
+                <span class="material-icons-round text-sm">star</span>
+                <span class="text-gray-400 ml-1">(5.0)</span>
+              </div>
+              <h3
+                class="text-lg font-bold text-secondary dark:text-white mb-3 hover:text-primary transition cursor-pointer leading-tight"
+              >
+                Advanced Android 12 &amp; Kotlin Development Course
+              </h3>
+              <div
+                class="flex items-center justify-between text-xs text-text-muted-light dark:text-gray-400 border-b border-gray-100 dark:border-gray-700 pb-4 mb-4"
+              >
+                <div class="flex items-center gap-1">
+                  <span class="material-icons-round text-sm">schedule</span> 6
+                  hours
+                </div>
+                <div class="flex items-center gap-1">
+                  <span class="material-icons-round text-sm">people</span> 22
+                  Students
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <img
+                    alt="Instructor"
+                    class="w-8 h-8 rounded-full"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGNGl1JktAnbvINCSGpKnhBmyPzMmovpjXMHaqoMbMwDdoT0jshU9VF1HP1Hm-0PpPHKw5355Svmr9ZMkwJeA_OstoWmnIylFPifUC0BG6mJahpl2CC0b4vvfzHF_WBMQVtq294xF7kZPYVSbroa9hW16xlGa7xRw3CIG3daKJ4loWezNNVIJCRTf2g0X_98YCC-FwY3i-47aFK11kg8SEdJzQenNNRrpj7X1akqTX92dowqd8h_IVmItmrYAysuapX6A3B_hEMv9z"
+                  />
+                  <span
+                    class="text-sm font-medium text-secondary dark:text-gray-200"
+                    >Alex Jones</span
+                  >
+                </div>
+                <span class="text-red-500 font-bold text-sm">$89.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-12">
+          <button
+            class="bg-primary hover:bg-blue-700 text-white px-8 py-3 rounded-md font-semibold text-sm transition shadow-lg shadow-blue-500/30"
+          >
+            VIEW ALL COURSES +
+          </button>
+        </div>
+      </div>
+    </section>
+    <div class="fixed bottom-6 right-6 z-50">
+      <button
+        class="bg-white dark:bg-card-dark text-primary p-3 rounded-full shadow-lg border border-gray-100 dark:border-gray-700 hover:scale-110 transition"
+      >
+        <span class="material-icons-round">forum</span>
+      </button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,472 @@
+<!doctype html>
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>TETSUO - Creative Portfolio</title>
+    <meta
+      content="A high-fidelity replication of the TETSUO portfolio landing page featuring a dark, editorial layout."
+      name="description"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;family=Teko:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#FF6600", // The striking orange from the reference
+              "background-light": "#F5F5F5",
+              "background-dark": "#0F0F0F",
+              "surface-light": "#FFFFFF",
+              "surface-dark": "#161616",
+            },
+            fontFamily: {
+              display: ["Teko", "sans-serif"],
+              body: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0px", // Sharp corners as requested
+            },
+            spacing: {
+              128: "32rem",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .text-justify-last-left {
+        text-align: justify;
+        text-align-last: left;
+      }
+      .grid-lines {
+        background-image: linear-gradient(
+          to right,
+          rgba(128, 128, 128, 0.1) 1px,
+          transparent 1px
+        );
+        background-size: 25% 100%;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100 font-body transition-colors duration-300 relative"
+  >
+    <div
+      class="fixed inset-0 pointer-events-none z-0 mx-auto max-w-7xl border-x border-gray-200 dark:border-gray-800 grid-lines"
+    ></div>
+    <header
+      class="fixed top-0 left-0 w-full z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between"
+      >
+        <div class="flex-shrink-0">
+          <a
+            class="text-3xl font-display font-bold tracking-widest text-black dark:text-white hover:text-primary transition-colors"
+            href="#"
+            >TETSUO</a
+          >
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <nav
+            class="flex space-x-6 text-xs font-bold tracking-widest uppercase"
+          >
+            <a class="text-primary" href="#">Home</a>
+            <a class="hover:text-primary transition-colors" href="#">Prices</a>
+            <a class="hover:text-primary transition-colors" href="#"
+              >Portfolio</a
+            >
+            <a class="hover:text-primary transition-colors" href="#">Blog</a>
+            <a class="hover:text-primary transition-colors" href="#">Shop</a>
+            <a class="hover:text-primary transition-colors" href="#"
+              >Elements</a
+            >
+          </nav>
+          <div
+            class="flex items-center space-x-4 pl-4 border-l border-gray-300 dark:border-gray-700"
+          >
+            <button class="hover:text-primary transition-colors">
+              <span class="material-icons text-sm">search</span>
+            </button>
+            <button class="hover:text-primary transition-colors">
+              <span class="material-icons text-sm">shopping_bag</span>
+            </button>
+            <button class="hover:text-primary transition-colors">
+              <span class="material-icons text-sm">menu</span>
+            </button>
+            <button
+              class="hover:text-primary transition-colors ml-2"
+              onclick="document.documentElement.classList.toggle('dark')"
+            >
+              <span class="material-icons text-sm">dark_mode</span>
+            </button>
+          </div>
+        </div>
+        <div class="md:hidden flex items-center">
+          <button
+            class="mr-4 hover:text-primary transition-colors"
+            onclick="document.documentElement.classList.toggle('dark')"
+          >
+            <span class="material-icons text-sm">dark_mode</span>
+          </button>
+          <button class="text-black dark:text-white">
+            <span class="material-icons">menu</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="relative z-10 pt-32 pb-20 max-w-7xl mx-auto px-6 space-y-32">
+      <section class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+        <div class="md:col-span-7 relative h-[500px] md:h-[600px] w-full">
+          <div
+            class="absolute top-0 right-10 w-4/5 h-4/5 bg-gray-200 dark:bg-gray-800 overflow-hidden shadow-2xl z-10"
+          >
+            <img
+              alt="Cyberpunk warrior illustration in orange and black"
+              class="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700 mix-blend-multiply dark:mix-blend-normal filter sepia-[.5] hue-rotate-[-30deg] saturate-200 contrast-125"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCytuzZauODFvh_Fqt12bOpIcG8tMFMVmstw3JsGY7U18sFHsu8KqRxCfHchoaLtuIajDO2oC7AHk10HwCnC-e3lFOEIGBWsxmvTP3Eb4RQ1-4xNlxUtqIxcZynyVnYZA6XG4Y9I2LAtPriSnCrDcNk4vWGzy_9CDkH2vXzSs1_fpn61_DDjW4o_es0TATJhH9pvv61FgmXV-HXPkKp8ICVuYf8Dlg-54zWGt3-mt-Guwe4nn_FyHBZsz7uiYkcCvrm9t_D82Yy518Q"
+            />
+          </div>
+          <div
+            class="absolute bottom-10 left-0 w-1/3 h-1/3 bg-white dark:bg-black p-2 z-20 shadow-lg border border-gray-200 dark:border-gray-700"
+          >
+            <img
+              alt="Black and white sketch detail"
+              class="w-full h-full object-cover grayscale"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDD0m2uq_tBTXcip6lRyMXsUS9CU1-ptCoqlNlApQpa8MZJDWQkwwqSWniKaP4xfMa9VWBuiOHEMiTXjkksWzwfhGJZDgvcEtj65US-hQDKfErOJyNd1UDC06ktg2_kxXrK_dt9hO-Rkfgv2HXtS5tjm9viIoi2XzpNpv1Vrtf_QNJH80XBQkFK_iQH1SQo_tZa0bTQa7AD-1xC_faBV4UX1vKoRkt5LcYGptnsgs2RTdzUtKa9lhDBmlhkTZVp24oIG20WcMmajZgC"
+            />
+          </div>
+          <div
+            class="absolute -bottom-5 right-20 w-1/4 h-1/4 bg-white dark:bg-black p-2 z-30 shadow-lg border border-gray-200 dark:border-gray-700 hidden md:block"
+          >
+            <img
+              alt="Ink texture detail"
+              class="w-full h-full object-cover grayscale contrast-150"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDaeeqrB3v1-1FhKKze4Fy6TVK68wuZfk6kJMb_6lfCRj-_BzlbnyWMUHCG2owQaYdLNntMjlRPp5ESn01gTRaMdCC1VXVnI6wI3tZ2DiEJTj7UqkZgp6M5gCAQ6wjVGWkDW9Bm1bNtw1F22Tdsuj9cZqx7XCFJ-5o4AF5Vu_ucHqt5OWfZBI__hdU76AxxxodtCOOTYYMv0JE0O63opnjHFeCr8yqUcDhk2wj8ad-cwDgF2WfzxxJuIfaQ5xaRilNDXHm69VETMGs"
+            />
+          </div>
+          <div
+            class="absolute top-10 left-10 text-primary font-display text-4xl font-bold opacity-80 z-20 mix-blend-difference"
+          >
+            失われた少年
+          </div>
+        </div>
+        <div
+          class="md:col-span-5 flex flex-col justify-center space-y-6 md:pl-8"
+        >
+          <h2
+            class="text-5xl md:text-6xl font-display font-bold uppercase leading-[0.9] text-black dark:text-white"
+          >
+            A Lost Soul of an
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-gray-600 dark:from-gray-500 dark:to-gray-700"
+              >Old Warrior</span
+            >
+          </h2>
+          <div class="w-12 h-1 bg-primary"></div>
+          <p
+            class="text-sm md:text-base text-gray-600 dark:text-gray-400 leading-relaxed text-justify-last-left font-light"
+          >
+            Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
+            lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis
+            sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit
+            amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio
+            tincidunt auctor a ornare odio.
+          </p>
+          <div class="pt-4">
+            <a
+              class="inline-block px-8 py-3 border border-gray-900 dark:border-white text-xs font-bold tracking-[0.2em] uppercase hover:bg-primary hover:border-primary hover:text-white transition-all duration-300"
+              href="#"
+            >
+              View Project
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+        <div
+          class="order-2 md:order-1 md:col-span-5 flex flex-col justify-center space-y-6 md:pr-8 text-right md:text-left"
+        >
+          <h2
+            class="text-5xl md:text-6xl font-display font-bold uppercase leading-[0.9] text-black dark:text-white flex flex-col"
+          >
+            <span>The Freedom We</span>
+            <span class="text-gray-500 dark:text-gray-400">Strive For</span>
+          </h2>
+          <div class="w-12 h-1 bg-primary ml-auto md:ml-0"></div>
+          <p
+            class="text-sm md:text-base text-gray-600 dark:text-gray-400 leading-relaxed text-justify-last-left font-light"
+            dir="rtl"
+          >
+            <span class="block text-justify-last-left" dir="ltr">
+              Auctor aliquet aenean sollicitudin, lorem quis bibendum auctor,
+              nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed
+              odio sit amet nibh vulputate cursus a sit amet mauris. Morbi
+              accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a
+              ornare odio.
+            </span>
+          </p>
+          <div class="pt-4 flex justify-end md:justify-start">
+            <a
+              class="inline-block px-8 py-3 border border-gray-900 dark:border-white text-xs font-bold tracking-[0.2em] uppercase hover:bg-white hover:text-black hover:border-white dark:hover:bg-white dark:hover:text-black transition-all duration-300"
+              href="#"
+            >
+              View Project
+            </a>
+          </div>
+        </div>
+        <div
+          class="order-1 md:order-2 md:col-span-7 relative h-[500px] md:h-[600px] w-full"
+        >
+          <div
+            class="absolute top-0 left-0 w-3/4 h-3/4 bg-gray-200 dark:bg-gray-800 z-10 overflow-hidden"
+          >
+            <img
+              alt="Portrait of a woman with dark hair"
+              class="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-700"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtVRqpzGuc4GNvHDr1oQIYw-adKCloYsgb-YeVLJzfrIMaKZ11wuTfKyDftqRKP6Aq7hE9QShuyE8YXozTDXh3GEZNEHaTqL5gO0GQIoxZk-DgZ-JLfe1k5fqVqLXt_HeOeQbFAO6MdrKJW4HDnsKhrTbjrzAbkGN3vSwfwcVlZOep5kE9Rd1F5jMB6drssktVtL8TwlrjXZ0nXonv2JqQHa3H9cHZhgsf6L0eXWvrSE5DzRVRH_lAjqYLSynsVI8kS7ekgZGbczFg"
+            />
+          </div>
+          <div
+            class="absolute top-0 -left-6 h-3/4 w-6 writing-vertical text-[10px] tracking-widest text-gray-400 font-mono hidden md:block"
+          >
+            09.23.84 // SYSTEM_OVERRIDE
+          </div>
+          <div
+            class="absolute bottom-10 right-0 w-2/5 h-2/5 bg-primary z-0"
+          ></div>
+          <div
+            class="absolute bottom-14 right-4 w-2/5 h-2/5 z-20 overflow-hidden mix-blend-multiply dark:mix-blend-normal"
+          >
+            <img
+              alt="Abstract texture"
+              class="w-full h-full object-cover opacity-80 filter contrast-150"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB5HjMxbQIwOIl5zDvv1AFXogEwLaFAm5Jrc8gYtI_n3b-HufUTdL7fFsL0YjseeYMoucyXQ5TkLx0h04NcwQS8sbEhsmVgsQ-kod2P3Eo1RGee1d9Rt8bmh6GDnAqWHhb_gN9Q5vahCM_y2IAAT7ulpsYpiiGq4F8-nyWFpgwIb7amUJ9BRwN74grC9SLBzeA2dRcl841VkoOP4BXbN6nnoodzMN0UzL7tZ-EmD4Ei07nRUycZM6fZ369ibG_X7RYMdk7EIzT22l_"
+            />
+          </div>
+          <div
+            class="absolute bottom-20 left-10 w-32 h-40 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 p-2 z-30 transform rotate-3"
+          >
+            <img
+              alt="Retro sketch"
+              class="w-full h-full object-cover grayscale contrast-200"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnabBhMKSCyDanBrpFVAXyMU3G-y0JQAM98OpWjN6husJ2OaNr0U_zFz7wzr-C9ruZqHlKey5iYJVRmiD7OtOLhmmTy36Qob9-890g2Nqvu624TSZMXeZ837A0pm0D7sJZi_-xA4YqFBrX1xyct1jIEEjjTQvxx3Yt8nEwENe01M5nDCTuuhbOZU057IUDkaZhJeJXVhaWl9P9_nK2WbioZKY6xqPmBfNe7zYwpUUalW0oxhBbdR_wKBw1Vtzw2QbeKNghpWhKmcgJ"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+        <div class="md:col-span-7 relative h-[500px] md:h-[600px] w-full">
+          <div
+            class="absolute top-10 left-10 w-3/4 h-3/4 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 z-10 p-4"
+          >
+            <img
+              alt="Technical drawing illustration"
+              class="w-full h-full object-cover grayscale contrast-150 opacity-80"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3sMUvjxGrTC33KImXiJ1kUCxX_hXJrkka3cgpxibP-6q87dM3IHiGtJmUMhQ9x65As1ii8Vt8UNYoWrKexoYkugGDsBkDDuQvWyAbPbOVb5cL6x_hWALL1Ru0aTT59eCpcJt2hgW-dEHT7XPLF1501HaiXVl9_uuExJKNrvbGdM_y5qlvFDl5OF9rXzDV9kDcwHdZLGJC4GdYnHYq9_3pO4OXr41s90ZBHt6PoNAKa4E8W_9Zd-atygA0pEGodK-fX8pvn2HDU0Ex"
+            />
+          </div>
+          <div
+            class="absolute bottom-0 left-0 w-1/3 h-1/3 bg-primary z-20 flex items-center justify-center overflow-hidden"
+          >
+            <img
+              alt="Neon art"
+              class="w-full h-full object-cover opacity-50 mix-blend-multiply"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdmryg4EGcei9GLf45D7qKQmUAVbiupeInWwHk_kRHkHeu9Xq0rwq7daMtTQEKTri6nE4r7WDkznS0bOUswCVKzzFjGnaw_v09l8gEN4VEDcCcFbrx2DzFCtnBeLvaW0P654b4Pebill9i0PF4kOnjRjHgknNqxUw0nCfKVfhElIY6FN7qe_iBmMzlw4fh9U8_2zD2KbjRUn1B6-cQRp-maIXdMsoHvByazdj39PRGzOh4MREaNvHpHv_wecK0ykQ48I5lajUO3_O7"
+            />
+          </div>
+          <div
+            class="absolute bottom-20 right-20 w-32 h-32 bg-white dark:bg-black border border-gray-200 dark:border-gray-600 z-30 p-1"
+          >
+            <img
+              alt="Abstract texture"
+              class="w-full h-full object-cover grayscale"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAP4lINoVl5MMC8R6jEjH1K8hPgfYJr0KxtzBydN8NOhUdgsC4K5N5Mp-_nExqCAASpE6wZgJObD4gnFI9x6bM6bAG5g7GGY_bqDUGz8VnJrhKp7_MVKGdZBVY_cMUaAnLy8zxl6ax-XR1_dWIp7i0GI8xkgItVk7qzHWJdO7LetKDPzqW5szArZTE9JcFRWx7RQBjJxaL0xv8u-meGBJMFbiiuc00BE3xD4cth4CBi6CdxzZmAH-Q7bKWSJ1ByeN8Af2vmsRH78n6d"
+            />
+            <span
+              class="absolute top-1 left-1 text-[8px] font-bold text-primary"
+              >LOST BOY</span
+            >
+          </div>
+        </div>
+        <div
+          class="md:col-span-5 flex flex-col justify-center space-y-6 md:pl-8"
+        >
+          <h2
+            class="text-5xl md:text-6xl font-display font-bold uppercase leading-[0.9] text-black dark:text-white"
+          >
+            How Loneliness <br />
+            <span class="text-gray-500">Affects Our Senses</span>
+          </h2>
+          <div class="w-12 h-1 bg-primary"></div>
+          <p
+            class="text-sm md:text-base text-gray-600 dark:text-gray-400 leading-relaxed text-justify-last-left font-light"
+          >
+            Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a
+            ornare odio. Proin gravida nibh vel velit auctor aliquet. Aenean
+            sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,
+            nec sagittis sem nibh id elit.
+          </p>
+          <div class="pt-4">
+            <a
+              class="inline-block px-8 py-3 border border-gray-900 dark:border-white text-xs font-bold tracking-[0.2em] uppercase hover:bg-primary hover:border-primary hover:text-white transition-all duration-300"
+              href="#"
+            >
+              View Project
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+        <div
+          class="order-2 md:order-1 md:col-span-5 flex flex-col justify-center space-y-6 md:pr-8 text-right md:text-left"
+        >
+          <h2
+            class="text-5xl md:text-6xl font-display font-bold uppercase leading-[0.9] text-black dark:text-white"
+          >
+            Step in Evolution <br />
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400"
+              >Total Supremacy</span
+            >
+          </h2>
+          <div class="w-12 h-1 bg-primary ml-auto md:ml-0"></div>
+          <p
+            class="text-sm md:text-base text-gray-600 dark:text-gray-400 leading-relaxed text-justify-last-left font-light"
+          >
+            Sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi
+            accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a
+            ornare odio. Proin gravida nibh vel velit auctor aliquet.
+          </p>
+          <div class="pt-4 flex justify-end md:justify-start">
+            <a
+              class="inline-block px-8 py-3 border border-gray-900 dark:border-white text-xs font-bold tracking-[0.2em] uppercase hover:bg-white hover:text-black hover:border-white dark:hover:bg-white dark:hover:text-black transition-all duration-300"
+              href="#"
+            >
+              View Project
+            </a>
+          </div>
+        </div>
+        <div
+          class="order-1 md:order-2 md:col-span-7 relative h-[500px] md:h-[600px] w-full"
+        >
+          <div
+            class="absolute top-0 right-10 w-3/4 h-3/4 bg-primary z-10 flex items-center justify-center overflow-hidden"
+          >
+            <img
+              alt="Woman silhouette"
+              class="w-full h-full object-cover opacity-60 mix-blend-multiply"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLZktkFNESfBOWn9lt65Dve_H4aVWS1YV8nyF94Jfzz_JNf_J8kWJCpsYF8OmjuXXJDkOHax1PWPOIsaOnXxtuSzo9AA31r2Q2E6vkFhqiqFYkGZlPPTuZD8sHiJdOpOOji-_zk6E6tb_XXMGW7A6vxMtEifxf9HjCNWdWP4r5BLWR8B76wcALPbzGHWAo-OQyMd1iT7pfbjblKLfQWQok7uZDOSluFU7PlbyEUbPQWz_Kh_TlxKbrseBTiGwIQAzn9qvtBYqUA7f_"
+            />
+            <div
+              class="absolute top-4 left-4 text-black font-display text-sm leading-tight"
+            >
+              MODEL<br />MONICA<br />POLYMKOV
+            </div>
+          </div>
+          <div
+            class="absolute bottom-10 right-0 w-1/2 h-1/3 bg-white dark:bg-black border border-gray-200 dark:border-gray-800 z-20 p-2"
+          >
+            <img
+              alt="Action pose silhouette"
+              class="w-full h-full object-cover grayscale contrast-125"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoYIHWjgt-pXV11bV796dwwrMSnuuPYcYrFV1EJXNkxK9z0zbcGxrsqYF5H0jmUAJoNyPXf3W0Ay__-OwGglH2DdWqAnyZsTlq0Fmr8xLnUwSKlX3SkqjfCGhI4sojLkyyhKEB0VF-plud8mXlen_LpVuJ6TGTZ8b2ZwfQ3iisN_XW5OtkeNUzcYxiUbbt6Vi-awUwPUXk2RBaCGasWXRqIe3VNYatVO1jRANDM0OjOBqRas-fr4TP24fqeF3oPBpzIxchT6rZCang"
+            />
+          </div>
+          <div
+            class="absolute bottom-20 left-10 md:left-20 w-32 h-40 bg-white dark:bg-black border border-gray-200 dark:border-gray-700 z-30 p-2 shadow-lg"
+          >
+            <img
+              alt="Dog sketch"
+              class="w-full h-full object-cover grayscale"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGfe_wvqPbIToSdfNUsalVS-rclUxU3FE2n24oUP0_yV-3xxQGy5DqCdxZ1JvIFGjC4_6zfI5pcvCunk2w9SGyWjg-EW3_0Z2-Y3QlocuJYFY7hKcdAMcC7mMq9ZHcBRpLCuUI6JFrhdr0anIceikmZ51j8l7jXBTzKgf7UcH7jfZuzfy1QJhJxaoQ8hu23kt7ERefxIQv43tgxyZuIpbCSGgcfHb3rh-Fh1kbpdY5MqbqNZZS1cKkoBn9QhvlJKiHF5if7fScT3Vm"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="relative z-10 border-t border-gray-200 dark:border-gray-800 bg-background-light dark:bg-background-dark py-20"
+    >
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <h2
+          class="text-6xl font-display font-bold uppercase tracking-widest mb-4 text-black dark:text-white"
+        >
+          TETSUO
+        </h2>
+        <p class="text-[10px] uppercase tracking-[0.4em] text-gray-500 mb-12">
+          A Theme for a creative society
+        </p>
+        <nav class="flex flex-wrap justify-center gap-8 mb-12">
+          <a
+            class="text-[10px] font-bold uppercase tracking-widest hover:text-primary transition-colors"
+            href="#"
+            >Home</a
+          >
+          <a
+            class="text-[10px] font-bold uppercase tracking-widest hover:text-primary transition-colors"
+            href="#"
+            >About</a
+          >
+          <a
+            class="text-[10px] font-bold uppercase tracking-widest hover:text-primary transition-colors"
+            href="#"
+            >Blog</a
+          >
+          <a
+            class="text-[10px] font-bold uppercase tracking-widest hover:text-primary transition-colors"
+            href="#"
+            >Shop</a
+          >
+          <a
+            class="text-[10px] font-bold uppercase tracking-widest hover:text-primary transition-colors"
+            href="#"
+            >Contact Us</a
+          >
+        </nav>
+        <div class="flex justify-center space-x-6">
+          <a
+            class="w-8 h-8 rounded-full border border-gray-300 dark:border-gray-700 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all text-gray-500 dark:text-gray-400"
+            href="#"
+          >
+            <span class="text-xs">FB</span>
+          </a>
+          <a
+            class="w-8 h-8 rounded-full border border-gray-300 dark:border-gray-700 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all text-gray-500 dark:text-gray-400"
+            href="#"
+          >
+            <span class="text-xs">TW</span>
+          </a>
+          <a
+            class="w-8 h-8 rounded-full border border-gray-300 dark:border-gray-700 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all text-gray-500 dark:text-gray-400"
+            href="#"
+          >
+            <span class="text-xs">IG</span>
+          </a>
+        </div>
+        <p class="mt-12 text-[10px] text-gray-400">
+          © 2023 TETSUO Theme. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+    <div class="fixed bottom-8 right-8 z-50">
+      <button
+        class="w-12 h-12 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center shadow-lg hover:bg-primary hover:text-white transition-colors"
+      >
+        <span class="material-icons text-xl">chat_bubble_outline</span>
+      </button>
+    </div>
+  </body>
+</html>

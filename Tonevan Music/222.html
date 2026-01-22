@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Tonevan Music</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#FF5722", // Vibrant Orange from reference
+              "background-light": "#FFF8F0", // Warm light beige
+              "background-dark": "#0a0a0a", // Deep black
+              "surface-dark": "#1a1a1a",
+              "accent-gold": "#D4AF37",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ["Space Grotesk", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .text-stroke-1 {
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+      }
+      .blend-multiply {
+        mix-blend-mode: multiply;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100 font-sans antialiased selection:bg-primary selection:text-white"
+  >
+    <section class="grid grid-cols-1 md:grid-cols-3 min-h-screen">
+      <div
+        class="bg-primary flex flex-col justify-between p-8 md:p-12 relative overflow-hidden group"
+      >
+        <div
+          class="absolute inset-0 opacity-10 pointer-events-none"
+          style="
+            background-image:
+              linear-gradient(#fff 1px, transparent 1px),
+              linear-gradient(90deg, #fff 1px, transparent 1px);
+            background-size: 40px 40px;
+          "
+        ></div>
+        <div
+          class="flex justify-between items-center text-white/80 text-xs tracking-widest uppercase z-10"
+        >
+          <span>Tonevan Music</span>
+          <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+        </div>
+        <div class="z-10 mt-auto mb-auto md:mt-0">
+          <div
+            class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-6 backdrop-blur-sm"
+          >
+            <span class="material-icons text-white">graphic_eq</span>
+          </div>
+          <h1
+            class="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight"
+          >
+            Where<br />
+            sound<br />
+            becomes<br />
+            story
+          </h1>
+        </div>
+        <div class="z-10 mt-12 md:mt-0">
+          <a
+            class="inline-flex items-center text-white border-b border-white/40 pb-1 hover:border-white transition-colors"
+            href="#explore"
+          >
+            Start Listening
+            <span class="material-icons text-sm ml-2">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+      <div class="relative h-[50vh] md:h-auto bg-gray-900">
+        <img
+          alt="Woman wearing headphones in warm golden hour light"
+          class="absolute inset-0 w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE3hSL83x2OdHooyyF4rQcqOv7_pSMWThZ0E1Q08lQoJR5WCM0Jlsj7KBKxHu0xMNKIFJ5WmZ0GUOaajd3omwgshl8PmC8rB3NiE-y8UIHZhjDNu1NrMVgkKcH-51t-cf1T6v5741mMAFVUtEymDNCvRZ1A3oeDe2hx1fhTmQXpJwGg6pT1rWaz0ZVW3yfHhBynBgnyh8mrfyzEMOIBpC-cQIz19V01nNngf5LmgH4BaxOM4_DCaEAI2Cj6Z8eueOLhMCUKhDJFPA"
+        />
+        <div
+          class="absolute top-8 left-8 right-8 flex justify-between text-white/70 text-xs tracking-widest uppercase"
+        >
+          <span>Tonevan Music</span>
+          <span>Est. 2024</span>
+        </div>
+      </div>
+      <div
+        class="bg-background-light dark:bg-zinc-900 flex flex-col justify-center items-center p-8 md:p-12 relative"
+      >
+        <div
+          class="absolute top-8 left-0 w-full px-8 flex justify-between text-gray-400 text-xs tracking-widest uppercase border-b border-gray-200 dark:border-gray-800 pb-4"
+        >
+          <span>Tonevan Music</span>
+          <span>Tonevan Music</span>
+        </div>
+        <div
+          class="relative w-48 h-48 md:w-64 md:h-64 rounded-full border border-orange-200 dark:border-orange-900/30 flex items-center justify-center bg-gradient-to-br from-orange-50 to-white dark:from-zinc-800 dark:to-zinc-900 shadow-xl shadow-orange-500/10"
+        >
+          <div class="text-center">
+            <span class="block font-display font-bold text-xl text-primary mb-1"
+              >Tonevan</span
+            >
+            <span
+              class="block text-sm uppercase tracking-widest text-gray-500 dark:text-gray-400"
+              >Music</span
+            >
+          </div>
+        </div>
+        <div class="absolute bottom-8 right-0 w-full px-8 flex justify-end">
+          <div class="h-16 w-[1px] bg-primary/30"></div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="relative w-full min-h-screen bg-black text-white overflow-hidden flex flex-col justify-end"
+    >
+      <div class="absolute inset-0 z-0">
+        <img
+          alt="Close up portrait of person with glasses and headphones"
+          class="w-full h-full object-cover opacity-60 mix-blend-overlay md:mix-blend-normal"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTqqvj9DYPi2UADGNgA-DEWdiTo1UK3OKNbw22mQc1m-bbFJiEpvhSYB8h2fomWD9WwVDlbhAgF6_TU78MS2ZJaXmSUwMB3qdcLT0kKucdVHolsH_enWq25IZJVbg3Xl7midnL6_g7YjHojBE7Cg20FIEfhT7rKC6m_ydzuQbkdNVUsYBZdIlvdikSqf_DPn30NId4BDzxP-knHEUqMgtV4aMrr08W08qLIyjDwWibfNx7vJpjGjqO9YYD_I5ev6-DF8jpZF60xqI"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"
+        ></div>
+      </div>
+      <div class="relative z-10 w-full px-6 md:px-12 pb-12 pt-32">
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 md:mb-24 border-t border-white/20 pt-6"
+        >
+          <div class="group">
+            <span
+              class="block w-2 h-2 bg-primary rounded-full mb-4 group-hover:scale-150 transition-transform"
+            ></span>
+            <h3 class="font-display font-semibold text-lg mb-2">
+              Professional curation
+            </h3>
+            <p class="text-sm text-gray-400 max-w-xs">
+              Hand-picked tracks that resonate with cinematic quality and
+              emotional depth.
+            </p>
+          </div>
+          <div class="group">
+            <span
+              class="block w-2 h-2 bg-white rounded-full mb-4 group-hover:scale-150 transition-transform"
+            ></span>
+            <h3 class="font-display font-semibold text-lg mb-2">
+              Transparent licensing
+            </h3>
+            <p class="text-sm text-gray-400 max-w-xs">
+              Clear rights, no hidden fees. Use our music worldwide on any
+              platform.
+            </p>
+          </div>
+          <div class="group">
+            <span
+              class="block w-2 h-2 bg-white rounded-full mb-4 group-hover:scale-150 transition-transform"
+            ></span>
+            <h3 class="font-display font-semibold text-lg mb-2">
+              Aesthetic precision
+            </h3>
+            <p class="text-sm text-gray-400 max-w-xs">
+              Sound that hits the mark perfectly, designed for modern
+              storytellers.
+            </p>
+          </div>
+        </div>
+        <h2
+          class="font-display font-bold text-[12vw] leading-[0.85] tracking-tight text-white uppercase opacity-90"
+        >
+          Why Tonevan
+        </h2>
+      </div>
+    </section>
+    <section
+      class="relative min-h-screen bg-background-dark text-white flex items-center overflow-hidden py-20"
+    >
+      <div
+        class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[500px] bg-orange-600/20 blur-[120px] rounded-full pointer-events-none"
+      ></div>
+      <div
+        class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-primary/10 blur-[100px] rounded-full pointer-events-none"
+      ></div>
+      <div
+        class="container mx-auto px-6 md:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-end h-full"
+      >
+        <div class="lg:col-span-5 flex flex-col justify-end pb-12">
+          <div
+            class="flex space-x-24 mb-8 text-[10px] tracking-widest text-gray-500 uppercase border-t border-gray-800 pt-4 w-full"
+          >
+            <span>Tonevan Music</span>
+            <span>Tonevan Music</span>
+          </div>
+          <div class="flex gap-4 mb-8">
+            <div
+              class="w-24 h-24 rounded-lg overflow-hidden border border-white/10 group"
+            >
+              <img
+                alt="Vinyl record player"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsqgM9UDPyTVnpeRyV7PPWcqqFG1YD0UqSS-1oDMGYeRSIVS7ssES_MkViSFERRsKBUfg0zPsakxGMsuBtLLvyxs66wco0BHY6TQYwiqNcFptGVddqSOCidZXJC9fvHvR7C6y7Th3H8rkMJZMQKgH4ZkxKJfcqW0FHI8xEfYux74Q5d97DSbTlc4KLDRvHv9swBrqHO-5mXXYgYTJBVR7Br_v35dm_TU1l8mnEHfqrWcSsOgU9WFF8aSuynAD9eSy9rpFCmlGP9Zw"
+              />
+            </div>
+            <div
+              class="w-24 h-24 rounded-lg overflow-hidden border border-white/10 group"
+            >
+              <img
+                alt="Abstract silver sphere art"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFWRMiEBr5GxDrue2PT6pk5EZEV_281xKK92P_-R9mozBDagFZny12seTj-QWHt0Z2Jie_nZ-rdigHf2nSwUt5wqUKumM6VmaBKOAGBb13YoccDBVW9_oj8j5OOlqiKKvQ3zZ3AaoUJVWIZMBJ2Pa-eT27SuxzFfx6tle4sQ8thsfXmMHAII3DMXNOmD1419ThNaGgCy6nfp45lvty8dqNfW5P9Fucja5GbPDdiuEZjbjmDpYwt7dqgjXZaSt9IeI7vec150M82F8"
+              />
+            </div>
+          </div>
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-8 h-4 border border-white rounded-full p-[2px]">
+              <div class="w-2 h-2 bg-white rounded-full"></div>
+            </div>
+            <span
+              class="uppercase text-sm tracking-widest font-semibold text-primary"
+              >Features</span
+            >
+          </div>
+          <h2 class="font-display text-5xl md:text-6xl font-bold mb-6">
+            Our Solution
+          </h2>
+          <p class="text-gray-400 leading-relaxed mb-8 max-w-md">
+            We partner with independent labels and music libraries, officially
+            clearing rights and selecting music perfectly suited to mood and
+            format. No hassle, just the right music, in the right tone,
+            delivered on time.
+          </p>
+          <button
+            class="bg-primary hover:bg-orange-600 text-white px-8 py-4 rounded-full font-display font-medium inline-flex items-center gap-2 w-max transition-all"
+          >
+            Explore Catalog
+            <span class="material-icons text-sm">north_east</span>
+          </button>
+        </div>
+        <div class="lg:col-span-7 h-[50vh] lg:h-[80vh] relative">
+          <img
+            alt="Silhouette of saxophone player in warm spotlight"
+            class="w-full h-full object-cover object-right-bottom rounded-2xl shadow-2xl shadow-black/50 grayscale-[20%] sepia-[20%]"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqwIDMNlAN-12MJ2eZ8cV0kfcryRIx3dyqUEKsWUHIRnbjnExCzq7dH0b66m-kE0B7oII1KfeaaG6MygxbdbmP7BJLdSfph60kg6yKZnVwrDmswtf7YgO6-Zx_E8ptAgI7WVN-ghGTOSuyrhV0sk-WQvJ2Xk4BashjGrYkLY7U6qVeJxJeWd0kqHitIcfOlu-NbT7dfOaSy4xMVpiGwjAy2M013T7ilAPFHxBXFh6pFOqPCHvQxJI3O04PFyjIq8gr8NF09Tqn0Og"
+          />
+          <div
+            class="absolute bottom-8 right-8 bg-black/60 backdrop-blur-md p-4 rounded-xl border border-white/10 max-w-[200px] hidden md:block"
+          >
+            <div class="flex items-center gap-3 mb-2">
+              <div class="bg-primary/20 p-2 rounded-full">
+                <span class="material-icons text-primary text-sm"
+                  >music_note</span
+                >
+              </div>
+              <span class="text-xs font-bold uppercase tracking-wider"
+                >Now Playing</span
+              >
+            </div>
+            <div class="text-sm font-display font-medium">
+              Midnight Jazz Club
+            </div>
+            <div class="text-xs text-gray-400">Tonevan Originals</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
